@@ -31,13 +31,13 @@
 
   <!-- ─────────────────────────────────────────────────────────────────── -->
   <!-- ① <form> 태그는 딱 한 번만 열고, 모든 질문을 이 안에 넣습니다.    -->
-  <!-- ② action / method는 Formspree 예시를 그대로 이용하되, 변경 가능. -->
+  <!-- ② action / method는 Apps Script 웹앱 예시를 사용합니다.         -->
   <!-- ─────────────────────────────────────────────────────────────────── -->
- <form id="surveyForm" action="https://script.google.com/macros/s/AKfycbzW8FuqDxj7Bs_T3CyANr3uJZ7BNeFgJd5Ir-4u1MLI29IWa3Zh9R2nS5058xdHNdYcIQ/exec" method="POST">
-
+  <form
+    id="surveyForm"
+    action="https://script.google.com/macros/s/AKfycbzW8FuqDxj7Bs_T3CyANr3uJZ7BNeFgJd5Ir-4u1MLI29IWa3Zh9R2nS5058xdHNdYcIQ/exec"
+    method="POST"
   >
-    <!-- Formspree 전송 시 메일 제목 -->
-    <input type="hidden" name="_subject" value="새로운 설문 응답" />
     <!-- (선택) 응답자 이메일 입력란 -->
     <input type="email" name="_replyto" placeholder="이메일 (선택)" />
 
@@ -48,1370 +48,24 @@
     <!--     + Perceived  : name="perceived_0" ~ name="perceived_122"            -->
     <!--     + value는 1~5, required 속성으로 필수 응답 지정                       -->
     <!-- ─────────────────────────────────────────────────────────────────── -->
-<!-- ─────────────── Self-Report 1~123 ─────────────── -->
-
-<div class="question">
-  <div class="question-title">Self-Report 1. 나는 주변의 평가나 시선에 크게 영향을 받지 않는다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_0" value="1" required> 1</label>
-    <label><input type="radio" name="self_0" value="2" required> 2</label>
-    <label><input type="radio" name="self_0" value="3" required> 3</label>
-    <label><input type="radio" name="self_0" value="4" required> 4</label>
-    <label><input type="radio" name="self_0" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 2. 주변에서 종종 '특이하다'는 말을 듣거나, 생각이 독창적이라는 평가를 받는다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_1" value="1" required> 1</label>
-    <label><input type="radio" name="self_1" value="2" required> 2</label>
-    <label><input type="radio" name="self_1" value="3" required> 3</label>
-    <label><input type="radio" name="self_1" value="4" required> 4</label>
-    <label><input type="radio" name="self_1" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 3. 타인의 명령이나 위계적 구조보다는 내 방식대로 움직이고 싶어 한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_2" value="1" required> 1</label>
-    <label><input type="radio" name="self_2" value="2" required> 2</label>
-    <label><input type="radio" name="self_2" value="3" required> 3</label>
-    <label><input type="radio" name="self_2" value="4" required> 4</label>
-    <label><input type="radio" name="self_2" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 4. 다수가 옳다고 해도 나만의 기준을 쉽게 포기하지 않는다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_3" value="1" required> 1</label>
-    <label><input type="radio" name="self_3" value="2" required> 2</label>
-    <label><input type="radio" name="self_3" value="3" required> 3</label>
-    <label><input type="radio" name="self_3" value="4" required> 4</label>
-    <label><input type="radio" name="self_3" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 5. 혼자서 집중하는 시간을 매우 소중히 여기며, 팀플레이보다 개인 작업을 선호한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_4" value="1" required> 1</label>
-    <label><input type="radio" name="self_4" value="2" required> 2</label>
-    <label><input type="radio" name="self_4" value="3" required> 3</label>
-    <label><input type="radio" name="self_4" value="4" required> 4</label>
-    <label><input type="radio" name="self_4" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 6. 얽매이거나 구속받는 것에 대한 반감이 강한 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_5" value="1" required> 1</label>
-    <label><input type="radio" name="self_5" value="2" required> 2</label>
-    <label><input type="radio" name="self_5" value="3" required> 3</label>
-    <label><input type="radio" name="self_5" value="4" required> 4</label>
-    <label><input type="radio" name="self_5" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 7. 주변 사람에게 크게 신경 쓰지 않는 편이고, 무심하다는 말을 자주 듣는다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_6" value="1" required> 1</label>
-    <label><input type="radio" name="self_6" value="2" required> 2</label>
-    <label><input type="radio" name="self_6" value="3" required> 3</label>
-    <label><input type="radio" name="self_6" value="4" required> 4</label>
-    <label><input type="radio" name="self_6" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 8. 권위에 복종하는 것에 대해 본능적인 저항감을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_7" value="1" required> 1</label>
-    <label><input type="radio" name="self_7" value="2" required> 2</label>
-    <label><input type="radio" name="self_7" value="3" required> 3</label>
-    <label><input type="radio" name="self_7" value="4" required> 4</label>
-    <label><input type="radio" name="self_7" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 9. 말투가 자기 중심적으로 비춰져 오해를 받기도 한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_8" value="1" required> 1</label>
-    <label><input type="radio" name="self_8" value="2" required> 2</label>
-    <label><input type="radio" name="self_8" value="3" required> 3</label>
-    <label><input type="radio" name="self_8" value="4" required> 4</label>
-    <label><input type="radio" name="self_8" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 10. 처음 관심을 가졌던 일도 쉽게 시들해지는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_9" value="1" required> 1</label>
-    <label><input type="radio" name="self_9" value="2" required> 2</label>
-    <label><input type="radio" name="self_9" value="3" required> 3</label>
-    <label><input type="radio" name="self_9" value="4" required> 4</label>
-    <label><input type="radio" name="self_9" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 11. 누군가의 기대나 규칙에 따르기보다는 스스로 설정한 방향을 선호한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_10" value="1" required> 1</label>
-    <label><input type="radio" name="self_10" value="2" required> 2</label>
-    <label><input type="radio" name="self_10" value="3" required> 3</label>
-    <label><input type="radio" name="self_10" value="4" required> 4</label>
-    <label><input type="radio" name="self_10" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 12. 타인의 시선을 넘어서 나만의 기준과 이상을 좇는다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_11" value="1" required> 1</label>
-    <label><input type="radio" name="self_11" value="2" required> 2</label>
-    <label><input type="radio" name="self_11" value="3" required> 3</label>
-    <label><input type="radio" name="self_11" value="4" required> 4</label>
-    <label><input type="radio" name="self_11" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 13. 스스로 만든 기준이나 프레임이 삶을 이끄는 나침반이 된다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_12" value="1" required> 1</label>
-    <label><input type="radio" name="self_12" value="2" required> 2</label>
-    <label><input type="radio" name="self_12" value="3" required> 3</label>
-    <label><input type="radio" name="self_12" value="4" required> 4</label>
-    <label><input type="radio" name="self_12" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 14. 나의 독립성과 자율성은 쉽게 양보할 수 없는 가치다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_13" value="1" required> 1</label>
-    <label><input type="radio" name="self_13" value="2" required> 2</label>
-    <label><input type="radio" name="self_13" value="3" required> 3</label>
-    <label><input type="radio" name="self_13" value="4" required> 4</label>
-    <label><input type="radio" name="self_13" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 15. 나는 나의 가치와 신념에 따라 일관되게 행동한다고 생각한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_14" value="1" required> 1</label>
-    <label><input type="radio" name="self_14" value="2" required> 2</label>
-    <label><input type="radio" name="self_14" value="3" required> 3</label>
-    <label><input type="radio" name="self_14" value="4" required> 4</label>
-    <label><input type="radio" name="self_14" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 16. 현실보다는 상상과 관찰에서 아이디어를 얻고, 새로운 관점을 즐겨 탐색한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_15" value="1" required> 1</label>
-    <label><input type="radio" name="self_15" value="2" required> 2</label>
-    <label><input type="radio" name="self_15" value="3" required> 3</label>
-    <label><input type="radio" name="self_15" value="4" required> 4</label>
-    <label><input type="radio" name="self_15" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 17. 기존의 틀보다는 나만의 방식으로 문제를 해결하려 한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_16" value="1" required> 1</label>
-    <label><input type="radio" name="self_16" value="2" required> 2</label>
-    <label><input type="radio" name="self_16" value="3" required> 3</label>
-    <label><input type="radio" name="self_16" value="4" required> 4</label>
-    <label><input type="radio" name="self_16" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 18. 감정의 결이 섬세하고, 예술이나 색감, 리듬 등에 민감한 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_17" value="1" required> 1</label>
-    <label><input type="radio" name="self_17" value="2" required> 2</label>
-    <label><input type="radio" name="self_17" value="3" required> 3</label>
-    <label><input type="radio" name="self_17" value="4" required> 4</label>
-    <label><input type="radio" name="self_17" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 19. 내면의 불안이나 복잡한 감정에 사로잡히는 순간이 종종 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_18" value="1" required> 1</label>
-    <label><input type="radio" name="self_18" value="2" required> 2</label>
-    <label><input type="radio" name="self_18" value="3" required> 3</label>
-    <label><input type="radio" name="self_18" value="4" required> 4</label>
-    <label><input type="radio" name="self_18" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 20. 개인적인 생각이나 상상 속 세계에 몰입해 외부와 단절된 듯한 시간을 자주 경험한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_19" value="1" required> 1</label>
-    <label><input type="radio" name="self_19" value="2" required> 2</label>
-    <label><input type="radio" name="self_19" value="3" required> 3</label>
-    <label><input type="radio" name="self_19" value="4" required> 4</label>
-    <label><input type="radio" name="self_19" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 21. 엉뚱하다는 말을 자주 듣고, 나만의 세계관이 뚜렷하다는 평을 받는다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_20" value="1" required> 1</label>
-    <label><input type="radio" name="self_20" value="2" required> 2</label>
-    <label><input type="radio" name="self_20" value="3" required> 3</label>
-    <label><input type="radio" name="self_20" value="4" required> 4</label>
-    <label><input type="radio" name="self_20" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 22. 사물이나 사건에서 남들과 다른 방식으로 의미를 찾으려 한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_21" value="1" required> 1</label>
-    <label><input type="radio" name="self_21" value="2" required> 2</label>
-    <label><input type="radio" name="self_21" value="3" required> 3</label>
-    <label><input type="radio" name="self_21" value="4" required> 4</label>
-    <label><input type="radio" name="self_21" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 23. 일상의 아름다움이나 상징을 민감하게 포착하는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_22" value="1" required> 1</label>
-    <label><input type="radio" name="self_22" value="2" required> 2</label>
-    <label><input type="radio" name="self_22" value="3" required> 3</label>
-    <label><input type="radio" name="self_22" value="4" required> 4</label>
-    <label><input type="radio" name="self_22" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 24. 창의적인 작업에 몰입할 때 행복을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_23" value="1" required> 1</label>
-    <label><input type="radio" name="self_23" value="2" required> 2</label>
-    <label><input type="radio" name="self_23" value="3" required> 3</label>
-    <label><input type="radio" name="self_23" value="4" required> 4</label>
-    <label><input type="radio" name="self_23" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 25. 독창성과 개성을 유지하기 위해 스스로를 고립시키기도 한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_24" value="1" required> 1</label>
-    <label><input type="radio" name="self_24" value="2" required> 2</label>
-    <label><input type="radio" name="self_24" value="3" required> 3</label>
-    <label><input type="radio" name="self_24" value="4" required> 4</label>
-    <label><input type="radio" name="self_24" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 26. 직관이나 영감을 신뢰하며, 그것이 삶의 방향성을 정한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_25" value="1" required> 1</label>
-    <label><input type="radio" name="self_25" value="2" required> 2</label>
-    <label><input type="radio" name="self_25" value="3" required> 3</label>
-    <label><input type="radio" name="self_25" value="4" required> 4</label>
-    <label><input type="radio" name="self_25" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 27. 내 삶은 하나의 창작물처럼 꾸며지고 채워져야 한다고 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_26" value="1" required> 1</label>
-    <label><input type="radio" name="self_26" value="2" required> 2</label>
-    <label><input type="radio" name="self_26" value="3" required> 3</label>
-    <label><input type="radio" name="self_26" value="4" required> 4</label>
-    <label><input type="radio" name="self_26" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 28. 나는 새로운 아이디어나 경험에 대해 열린 마음을 가지고 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_27" value="1" required> 1</label>
-    <label><input type="radio" name="self_27" value="2" required> 2</label>
-    <label><input type="radio" name="self_27" value="3" required> 3</label>
-    <label><input type="radio" name="self_27" value="4" required> 4</label>
-    <label><input type="radio" name="self_27" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 29. 명확한 이유 없이 무력감이나 불안감에 빠질 때가 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_28" value="1" required> 1</label>
-    <label><input type="radio" name="self_28" value="2" required> 2</label>
-    <label><input type="radio" name="self_28" value="3" required> 3</label>
-    <label><input type="radio" name="self_28" value="4" required> 4</label>
-    <label><input type="radio" name="self_28" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 30. 세상살이에 대한 막연한 두려움이나 회피하고 싶은 감정이 내게 익숙하다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_29" value="1" required> 1</label>
-    <label><input type="radio" name="self_29" value="2" required> 2</label>
-    <label><input type="radio" name="self_29" value="3" required> 3</label>
-    <label><input type="radio" name="self_29" value="4" required> 4</label>
-    <label><input type="radio" name="self_29" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 31. 평온하고 예측 가능한 환경에서 정서적 안정을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_30" value="1" required> 1</label>
-    <label><input type="radio" name="self_30" value="2" required> 2</label>
-    <label><input type="radio" name="self_30" value="3" required> 3</label>
-    <label><input type="radio" name="self_30" value="4" required> 4</label>
-    <label><input type="radio" name="self_30" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 32. 가까운 사람의 말이나 반응에 지나치게 영향을 받는 경향이 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_31" value="1" required> 1</label>
-    <label><input type="radio" name="self_31" value="2" required> 2</label>
-    <label><input type="radio" name="self_31" value="3" required> 3</label>
-    <label><input type="radio" name="self_31" value="4" required> 4</label>
-    <label><input type="radio" name="self_31" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 33. 실체 없는 불안이나 공허함을 종종 경험한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_32" value="1" required> 1</label>
-    <label><input type="radio" name="self_32" value="2" required> 2</label>
-    <label><input type="radio" name="self_32" value="3" required> 3</label>
-    <label><input type="radio" name="self_32" value="4" required> 4</label>
-    <label><input type="radio" name="self_32" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 34. 불안감 때문에 때로는 현실보다 상상에 기대는 경향이 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_33" value="1" required> 1</label>
-    <label><input type="radio" name="self_33" value="2" required> 2</label>
-    <label><input type="radio" name="self_33" value="3" required> 3</label>
-    <label><input type="radio" name="self_33" value="4" required> 4</label>
-    <label><input type="radio" name="self_33" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 35. 감정을 숨기며 타인에게 들키지 않으려 애쓴 적이 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_34" value="1" required> 1</label>
-    <label><input type="radio" name="self_34" value="2" required> 2</label>
-    <label><input type="radio" name="self_34" value="3" required> 3</label>
-    <label><input type="radio" name="self_34" value="4" required> 4</label>
-    <label><input type="radio" name="self_34" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 36. 불안을 해소하기 위해 주변을 통제하고 싶어질 때가 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_35" value="1" required> 1</label>
-    <label><input type="radio" name="self_35" value="2" required> 2</label>
-    <label><input type="radio" name="self_35" value="3" required> 3</label>
-    <label><input type="radio" name="self_35" value="4" required> 4</label>
-    <label><input type="radio" name="self_35" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 37. 마음속 감정이 정리가 안될 때 멍하게 보내는 시간이 많다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_36" value="1" required> 1</label>
-    <label><input type="radio" name="self_36" value="2" required> 2</label>
-    <label><input type="radio" name="self_36" value="3" required> 3</label>
-    <label><input type="radio" name="self_36" value="4" required> 4</label>
-    <label><input type="radio" name="self_36" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 38. 혼자만의 시간을 통해 정서적 균형을 맞추려 한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_37" value="1" required> 1</label>
-    <label><input type="radio" name="self_37" value="2" required> 2</label>
-    <label><input type="radio" name="self_37" value="3" required> 3</label>
-    <label><input type="radio" name="self_37" value="4" required> 4</label>
-    <label><input type="radio" name="self_37" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 39. 과거의 상처나 경험이 현재 선택과 감정에 영향을 주는 경우가 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_38" value="1" required> 1</label>
-    <label><input type="radio" name="self_38" value="2" required> 2</label>
-    <label><input type="radio" name="self_38" value="3" required> 3</label>
-    <label><input type="radio" name="self_38" value="4" required> 4</label>
-    <label><input type="radio" name="self_38" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 40. 물질적인 안정보다는 감정적, 관계적 안정이 더 큰 위안이 된다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_39" value="1" required> 1</label>
-    <label><input type="radio" name="self_39" value="2" required> 2</label>
-    <label><input type="radio" name="self_39" value="3" required> 3</label>
-    <label><input type="radio" name="self_39" value="4" required> 4</label>
-    <label><input type="radio" name="self_39" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 41. 내면 성장을 위해 노력하는 것이 삶의 중요한 목표 중 하나다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_40" value="1" required> 1</label>
-    <label><input type="radio" name="self_40" value="2" required> 2</label>
-    <label><input type="radio" name="self_40" value="3" required> 3</label>
-    <label><input type="radio" name="self_40" value="4" required> 4</label>
-    <label><input type="radio" name="self_40" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 42. 자아실현을 위한 여정에서 고통조차 의미 있다고 받아들인다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_41" value="1" required> 1</label>
-    <label><input type="radio" name="self_41" value="2" required> 2</label>
-    <label><input type="radio" name="self_41" value="3" required> 3</label>
-    <label><input type="radio" name="self_41" value="4" required> 4</label>
-    <label><input type="radio" name="self_41" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 43. 나는 스트레스 상황에서도 침착함을 유지하는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_42" value="1" required> 1</label>
-    <label><input type="radio" name="self_42" value="2" required> 2</label>
-    <label><input type="radio" name="self_42" value="3" required> 3</label>
-    <label><input type="radio" name="self_42" value="4" required> 4</label>
-    <label><input type="radio" name="self_42" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 44. 감정이 격해지면 스스로도 다스리기 어려울 때가 있으며, 예민해지는 경향이 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_43" value="1" required> 1</label>
-    <label><input type="radio" name="self_43" value="2" required> 2</label>
-    <label><input type="radio" name="self_43" value="3" required> 3</label>
-    <label><input type="radio" name="self_43" value="4" required> 4</label>
-    <label><input type="radio" name="self_43" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 45. 많은 사람보다는 적은 수의 깊이 있는 관계를 추구한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_44" value="1" required> 1</label>
-    <label><input type="radio" name="self_44" value="2" required> 2</label>
-    <label><input type="radio" name="self_44" value="3" required> 3</label>
-    <label><input type="radio" name="self_44" value="4" required> 4</label>
-    <label><input type="radio" name="self_44" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 46. 상대가 먼저 마음을 열어주기를 바라는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_45" value="1" required> 1</label>
-    <label><input type="radio" name="self_45" value="2" required> 2</label>
-    <label><input type="radio" name="self_45" value="3" required> 3</label>
-    <label><input type="radio" name="self_45" value="4" required> 4</label>
-    <label><input type="radio" name="self_45" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 47. 관계 안에서 인정받고, 진심을 이해받는 경험이 중요하다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_46" value="1" required> 1</label>
-    <label><input type="radio" name="self_46" value="2" required> 2</label>
-    <label><input type="radio" name="self_46" value="3" required> 3</label>
-    <label><input type="radio" name="self_46" value="4" required> 4</label>
-    <label><input type="radio" name="self_46" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 48. 말수가 적더라도 정서적으로 깊게 교류하는 관계에 만족을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_47" value="1" required> 1</label>
-    <label><input type="radio" name="self_47" value="2" required> 2</label>
-    <label><input type="radio" name="self_47" value="3" required> 3</label>
-    <label><input type="radio" name="self_47" value="4" required> 4</label>
-    <label><input type="radio" name="self_47" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 49. 서로가 진심을 나누는 순간에 강한 유대감을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_48" value="1" required> 1</label>
-    <label><input type="radio" name="self_48" value="2" required> 2</label>
-    <label><input type="radio" name="self_48" value="3" required> 3</label>
-    <label><input type="radio" name="self_48" value="4" required> 4</label>
-    <label><input type="radio" name="self_48" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 50. 대인관계에서 피상적인 인사나 겉도는 대화에 피로감을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_49" value="1" required> 1</label>
-    <label><input type="radio" name="self_49" value="2" required> 2</label>
-    <label><input type="radio" name="self_49" value="3" required> 3</label>
-    <label><input type="radio" name="self_49" value="4" required> 4</label>
-    <label><input type="radio" name="self_49" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 51. 거절이나 충돌을 피하기 위해 솔직한 감정을 숨긴 적이 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_50" value="1" required> 1</label>
-    <label><input type="radio" name="self_50" value="2" required> 2</label>
-    <label><input type="radio" name="self_50" value="3" required> 3</label>
-    <label><input type="radio" name="self_50" value="4" required> 4</label>
-    <label><input type="radio" name="self_50" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 52. 관계가 깊어지면 정서적으로 과도하게 몰입하게 되는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_51" value="1" required> 1</label>
-    <label><input type="radio" name="self_51" value="2" required> 2</label>
-    <label><input type="radio" name="self_51" value="3" required> 3</label>
-    <label><input type="radio" name="self_51" value="4" required> 4</label>
-    <label><input type="radio" name="self_51" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 53. 누군가와의 관계에서 감정적 안정감을 얻고 싶다는 바람이 있다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_52" value="1" required> 1</label>
-    <label><input type="radio" name="self_52" value="2" required> 2</label>
-    <label><input type="radio" name="self_52" value="3" required> 3</label>
-    <label><input type="radio" name="self_52" value="4" required> 4</label>
-    <label><input type="radio" name="self_52" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 54. 타인의 진심을 파악하려는 경향이 강해 눈치에 민감해진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_53" value="1" required> 1</label>
-    <label><input type="radio" name="self_53" value="2" required> 2</label>
-    <label><input type="radio" name="self_53" value="3" required> 3</label>
-    <label><input type="radio" name="self_53" value="4" required> 4</label>
-    <label><input type="radio" name="self_53" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 55. 내 생각이 잘 받아들여질 때 깊은 만족과 소속감을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_54" value="1" required> 1</label>
-    <label><input type="radio" name="self_54" value="2" required> 2</label>
-    <label><input type="radio" name="self_54" value="3" required> 3</label>
-    <label><input type="radio" name="self_54" value="4" required> 4</label>
-    <label><input type="radio" name="self_54" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 56. 나는 사람들 앞에서 말하는 것을 즐기며 에너지를 얻는다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_55" value="1" required> 1</label>
-    <label><input type="radio" name="self_55" value="2" required> 2</label>
-    <label><input type="radio" name="self_55" value="3" required> 3</label>
-    <label><input type="radio" name="self_55" value="4" required> 4</label>
-    <label><input type="radio" name="self_55" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 57. 나는 타인의 감정을 잘 이해하고 공감하는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_56" value="1" required> 1</label>
-    <label><input type="radio" name="self_56" value="2" required> 2</label>
-    <label><input type="radio" name="self_56" value="3" required> 3</label>
-    <label><input type="radio" name="self_56" value="4" required> 4</label>
-    <label><input type="radio" name="self_56" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 58. 타인의 감정선이나 분위기를 잘 읽지만, 표현에 있어 조심스러움을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_57" value="1" required> 1</label>
-    <label><input type="radio" name="self_57" value="2" required> 2</label>
-    <label><input type="radio" name="self_57" value="3" required> 3</label>
-    <label><input type="radio" name="self_57" value="4" required> 4</label>
-    <label><input type="radio" name="self_57" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 59. 맡은 일에서 높은 수준의 결과를 만들기 위해 노력한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_58" value="1" required> 1</label>
-    <label><input type="radio" name="self_58" value="2" required> 2</label>
-    <label><input type="radio" name="self_58" value="3" required> 3</label>
-    <label><input type="radio" name="self_58" value="4" required> 4</label>
-    <label><input type="radio" name="self_58" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 60. 평가와 피드백을 통해 스스로를 더 발전시키려 한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_59" value="1" required> 1</label>
-    <label><input type="radio" name="self_59" value="2" required> 2</label>
-    <label><input type="radio" name="self_59" value="3" required> 3</label>
-    <label><input type="radio" name="self_59" value="4" required> 4</label>
-    <label><input type="radio" name="self_59" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 61. 빠른 속도보다는 꼼꼼하고 계획적인 처리를 선호한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_60" value="1" required> 1</label>
-    <label><input type="radio" name="self_60" value="2" required> 2</label>
-    <label><input type="radio" name="self_60" value="3" required> 3</label>
-    <label><input type="radio" name="self_60" value="4" required> 4</label>
-    <label><input type="radio" name="self_60" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 62. 책임이 명확하지 않거나 즉흥적인 상황에서 불편함을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_61" value="1" required> 1</label>
-    <label><input type="radio" name="self_61" value="2" required> 2</label>
-    <label><input type="radio" name="self_61" value="3" required> 3</label>
-    <label><input type="radio" name="self_61" value="4" required> 4</label>
-    <label><input type="radio" name="self_61" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 63. 감정보다는 논리와 체계를 통해 일에 접근하는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_62" value="1" required> 1</label>
-    <label><input type="radio" name="self_62" value="2" required> 2</label>
-    <label><input type="radio" name="self_62" value="3" required> 3</label>
-    <label><input type="radio" name="self_62" value="4" required> 4</label>
-    <label><input type="radio" name="self_62" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 64. 자율적인 방식으로 일할 때 능률이 더 오르는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_63" value="1" required> 1</label>
-    <label><input type="radio" name="self_63" value="2" required> 2</label>
-    <label><input type="radio" name="self_63" value="3" required> 3</label>
-    <label><input type="radio" name="self_63" value="4" required> 4</label>
-    <label><input type="radio" name="self_63" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 65. 프로젝트를 시작할 때는 열정적이나 끝까지 유지하기 어렵다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_64" value="1" required> 1</label>
-    <label><input type="radio" name="self_64" value="2" required> 2</label>
-    <label><input type="radio" name="self_64" value="3" required> 3</label>
-    <label><input type="radio" name="self_64" value="4" required> 4</label>
-    <label><input type="radio" name="self_64" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 66. 결과보다 과정에서의 성취감이나 의미를 중시하는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_65" value="1" required> 1</label>
-    <label><input type="radio" name="self_65" value="2" required> 2</label>
-    <label><input type="radio" name="self_65" value="3" required> 3</label>
-    <label><input type="radio" name="self_65" value="4" required> 4</label>
-    <label><input type="radio" name="self_65" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 67. 모호한 역할이나 방향이 없을 때 혼란을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_66" value="1" required> 1</label>
-    <label><input type="radio" name="self_66" value="2" required> 2</label>
-    <label><input type="radio" name="self_66" value="3" required> 3</label>
-    <label><input type="radio" name="self_66" value="4" required> 4</label>
-    <label><input type="radio" name="self_66" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 68. 반복되는 업무보다 새로운 아이디어를 요구하는 일을 선호한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_67" value="1" required> 1</label>
-    <label><input type="radio" name="self_67" value="2" required> 2</label>
-    <label><input type="radio" name="self_67" value="3" required> 3</label>
-    <label><input type="radio" name="self_67" value="4" required> 4</label>
-    <label><input type="radio" name="self_67" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 69. 성과에 대한 인정을 통해 존재감을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_68" value="1" required> 1</label>
-    <label><input type="radio" name="self_68" value="2" required> 2</label>
-    <label><input type="radio" name="self_68" value="3" required> 3</label>
-    <label><input type="radio" name="self_68" value="4" required> 4</label>
-    <label><input type="radio" name="self_68" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 70. 커리어를 통해 자아를 실현하고 싶다는 열망이 강하다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_69" value="1" required> 1</label>
-    <label><input type="radio" name="self_69" value="2" required> 2</label>
-    <label><input type="radio" name="self_69" value="3" required> 3</label>
-    <label><input type="radio" name="self_69" value="4" required> 4</label>
-    <label><input type="radio" name="self_69" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 71. 조직 안에서 리더나 중심이 되기를 꺼리지는 않는다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_70" value="1" required> 1</label>
-    <label><input type="radio" name="self_70" value="2" required> 2</label>
-    <label><input type="radio" name="self_70" value="3" required> 3</label>
-    <label><input type="radio" name="self_70" value="4" required> 4</label>
-    <label><input type="radio" name="self_70" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 72. 구체적인 성과나 결과물이 없을 때 불안함을 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_71" value="1" required> 1</label>
-    <label><input type="radio" name="self_71" value="2" required> 2</label>
-    <label><input type="radio" name="self_71" value="3" required> 3</label>
-    <label><input type="radio" name="self_71" value="4" required> 4</label>
-    <label><input type="radio" name="self_71" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 73. 목표 없는 반복은 삶을 공허하게 만든다고 느낀다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_72" value="1" required> 1</label>
-    <label><input type="radio" name="self_72" value="2" required> 2</label>
-    <label><input type="radio" name="self_72" value="3" required> 3</label>
-    <label><input type="radio" name="self_72" value="4" required> 4</label>
-    <label><input type="radio" name="self_72" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 74. 내가 하는 일은 단순한 생계 수단이 아니라, 정체성의 표현이어야 한다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_73" value="1" required> 1</label>
-    <label><input type="radio" name="self_73" value="2" required> 2</label>
-    <label><input type="radio" name="self_73" value="3" required> 3</label>
-    <label><input type="radio" name="self_73" value="4" required> 4</label>
-    <label><input type="radio" name="self_73" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 75. 나는 계획을 철저히 세우고 지키는 편이다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_74" value="1" required> 1</label>
-    <label><input type="radio" name="self_74" value="2" required> 2</label>
-    <label><input type="radio" name="self_74" value="3" required> 3</label>
-    <label><input type="radio" name="self_74" value="4" required> 4</label>
-    <label><input type="radio" name="self_74" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 76. 나는 그룹 내에서 나의 의견이 중요하게 받아들여진다고 (타인에게) 인식된다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_75" value="1" required> 1</label>
-    <label><input type="radio" name="self_75" value="2" required> 2</label>
-    <label><input type="radio" name="self_75" value="3" required> 3</label>
-    <label><input type="radio" name="self_75" value="4" required> 4</label>
-    <label><input type="radio" name="self_75" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 77. 나는 구속당하거나 제한받는 상황을 견디기 어렵다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_76" value="1" required> 1</label>
-    <label><input type="radio" name="self_76" value="2" required> 2</label>
-    <label><input type="radio" name="self_76" value="3" required> 3</label>
-    <label><input type="radio" name="self_76" value="4" required> 4</label>
-    <label><input type="radio" name="self_76" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 78. 나는 반복적이고 틀이 정해진 일보다는 자유로운 구조를 선호한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_77" value="1" required> 1</label>
-    <label><input type="radio" name="self_77" value="2" required> 2</label>
-    <label><input type="radio" name="self_77" value="3" required> 3</label>
-    <label><input type="radio" name="self_77" value="4" required> 4</label>
-    <label><input type="radio" name="self_77" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 79. 나는 흥미를 잃으면 빠르게 관심이 식는 편이라고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_78" value="1" required> 1</label>
-    <label><input type="radio" name="self_78" value="2" required> 2</label>
-    <label><input type="radio" name="self_78" value="3" required> 3</label>
-    <label><input type="radio" name="self_78" value="4" required> 4</label>
-    <label><input type="radio" name="self_78" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 80. 나는 외부의 인정보다는 스스로의 만족과 의미를 중시한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_79" value="1" required> 1</label>
-    <label><input type="radio" name="self_79" value="2" required> 2</label>
-    <label><input type="radio" name="self_79" value="3" required> 3</label>
-    <label><input type="radio" name="self_79" value="4" required> 4</label>
-    <label><input type="radio" name="self_79" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 81. 나는 특정한 시간, 공간, 사람에 얽매이는 것을 싫어한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_80" value="1" required> 1</label>
-    <label><input type="radio" name="self_80" value="2" required> 2</label>
-    <label><input type="radio" name="self_80" value="3" required> 3</label>
-    <label><input type="radio" name="self_80" value="4" required> 4</label>
-    <label><input type="radio" name="self_80" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 82. 나는 무언가를 계속 유지하는 것보다 새로운 흐름에 반응하는 것이 자연스럽다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_81" value="1" required> 1</label>
-    <label><input type="radio" name="self_81" value="2" required> 2</label>
-    <label><input type="radio" name="self_81" value="3" required> 3</label>
-    <label><input type="radio" name="self_81" value="4" required> 4</label>
-    <label><input type="radio" name="self_81" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 83. 나는 스스로 삶의 리듬을 조절할 수 있을 때 안정감을 느낀다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_82" value="1" required> 1</label>
-    <label><input type="radio" name="self_82" value="2" required> 2</label>
-    <label><input type="radio" name="self_82" value="3" required> 3</label>
-    <label><input type="radio" name="self_82" value="4" required> 4</label>
-    <label><input type="radio" name="self_82" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 84. 나는 자발성이 없는 상황에서 창의력이 급격히 떨어진다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_83" value="1" required> 1</label>
-    <label><input type="radio" name="self_83" value="2" required> 2</label>
-    <label><input type="radio" name="self_83" value="3" required> 3</label>
-    <label><input type="radio" name="self_83" value="4" required> 4</label>
-    <label><input type="radio" name="self_83" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 85. 나는 일의 흐름이 자연스럽고 유기적일 때 몰입이 쉬워진다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_84" value="1" required> 1</label>
-    <label><input type="radio" name="self_84" value="2" required> 2</label>
-    <label><input type="radio" name="self_84" value="3" required> 3</label>
-    <label><input type="radio" name="self_84" value="4" required> 4</label>
-    <label><input type="radio" name="self_84" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 86. 나는 누군가에게 통제당한다고 느낄 때 스트레스가 높아진다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_85" value="1" required> 1</label>
-    <label><input type="radio" name="self_85" value="2" required> 2</label>
-    <label><input type="radio" name="self_85" value="3" required> 3</label>
-    <label><input type="radio" name="self_85" value="4" required> 4</label>
-    <label><input type="radio" name="self_85" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 87. 나는 자율적인 환경에서 나만의 리듬으로 일할 때 몰입도가 높다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_86" value="1" required> 1</label>
-    <label><input type="radio" name="self_86" value="2" required> 2</label>
-    <label><input type="radio" name="self_86" value="3" required> 3</label>
-    <label><input type="radio" name="self_86" value="4" required> 4</label>
-    <label><input type="radio" name="self_86" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 88. 나는 감정의 변화에 민감하고, 주변 분위기에 쉽게 영향을 받는다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_87" value="1" required> 1</label>
-    <label><input type="radio" name="self_87" value="2" required> 2</label>
-    <label><input type="radio" name="self_87" value="3" required> 3</label>
-    <label><input type="radio" name="self_87" value="4" required> 4</label>
-    <label><input type="radio" name="self_87" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 89. 나는 기분이 좋지 않을 땐 작은 일에도 예민하게 반응할 때가 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_88" value="1" required> 1</label>
-    <label><input type="radio" name="self_88" value="2" required> 2</label>
-    <label><input type="radio" name="self_88" value="3" required> 3</label>
-    <label><input type="radio" name="self_88" value="4" required> 4</label>
-    <label><input type="radio" name="self_88" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 90. 나는 감정을 명확히 표현하는 것이 어렵거나 두려울 때가 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_89" value="1" required> 1</label>
-    <label><input type="radio" name="self_89" value="2" required> 2</label>
-    <label><input type="radio" name="self_89" value="3" required> 3</label>
-    <label><input type="radio" name="self_89" value="4" required> 4</label>
-    <label><input type="radio" name="self_89" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 91. 나는 타인의 감정 상태를 민감하게 감지하는 편이라고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_90" value="1" required> 1</label>
-    <label><input type="radio" name="self_90" value="2" required> 2</label>
-    <label><input type="radio" name="self_90" value="3" required> 3</label>
-    <label><input type="radio" name="self_90" value="4" required> 4</label>
-    <label><input type="radio" name="self_90" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 92. 나는 감정의 골이 깊어지면 쉽게 회복되지 않는다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_91" value="1" required> 1</label>
-    <label><input type="radio" name="self_91" value="2" required> 2</label>
-    <label><input type="radio" name="self_91" value="3" required> 3</label>
-    <label><input type="radio" name="self_91" value="4" required> 4</label>
-    <label><input type="radio" name="self_91" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 93. 나는 정서적 불균형이 업무나 일상에 영향을 미치는 경우가 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_92" value="1" required> 1</label>
-    <label><input type="radio" name="self_92" value="2" required> 2</label>
-    <label><input type="radio" name="self_92" value="3" required> 3</label>
-    <label><input type="radio" name="self_92" value="4" required> 4</label>
-    <label><input type="radio" name="self_92" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 94. 나는 나를 이해해주는 사람에게만 감정을 자연스럽게 드러낸다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_93" value="1" required> 1</label>
-    <label><input type="radio" name="self_93" value="2" required> 2</label>
-    <label><input type="radio" name="self_93" value="3" required> 3</label>
-    <label><input type="radio" name="self_93" value="4" required> 4</label>
-    <label><input type="radio" name="self_93" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 95. 나는 기분이 좋을 땐 주변에 긍정 에너지를 주기도 한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_94" value="1" required> 1</label>
-    <label><input type="radio" name="self_94" value="2" required> 2</label>
-    <label><input type="radio" name="self_94" value="3" required> 3</label>
-    <label><input type="radio" name="self_94" value="4" required> 4</label>
-    <label><input type="radio" name="self_94" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 96. 나는 마음에 들지 않는 상황에선 냉정하게 선을 긋기도 한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_95" value="1" required> 1</label>
-    <label><input type="radio" name="self_95" value="2" required> 2</label>
-    <label><input type="radio" name="self_95" value="3" required> 3</label>
-    <label><input type="radio" name="self_95" value="4" required> 4</label>
-    <label><input type="radio" name="self_95" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 97. 나는 감정적으로 취약한 시기엔 대인관계를 차단하고 싶어진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_96" value="1" required> 1</label>
-    <label><input type="radio" name="self_96" value="2" required> 2</label>
-    <label><input type="radio" name="self_96" value="3" required> 3</label>
-    <label><input type="radio" name="self_96" value="4" required> 4</label>
-    <label><input type="radio" name="self_96" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 98. 좋은 가방, 시계, 자동차 등으로 나의 내 위치나 감각을 드러내고 싶어 할 때가 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_97" value="1" required> 1</label>
-    <label><input type="radio" name="self_97" value="2" required> 2</label>
-    <label><input type="radio" name="self_97" value="3" required> 3</label>
-    <label><input type="radio" name="self_97" value="4" required> 4</label>
-    <label><input type="radio" name="self_97" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 99. 나는 여행지나 식당 등을 SNS에 올리면서 나의 라이프스타일을 보여주고 싶어 한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_98" value="1" required> 1</label>
-    <label><input type="radio" name="self_98" value="2" required> 2</label>
-    <label><input type="radio" name="self_98" value="3" required> 3</label>
-    <label><input type="radio" name="self_98" value="4" required> 4</label>
-    <label><input type="radio" name="self_98" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 100. 나는 남들보다 더 ‘감각적인 삶’을 살고 있다는 인정을 받고 싶어 한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_99" value="1" required> 1</label>
-    <label><input type="radio" name="self_99" value="2" required> 2</label>
-    <label><input type="radio" name="self_99" value="3" required> 3</label>
-    <label><input type="radio" name="self_99" value="4" required> 4</label>
-    <label><input type="radio" name="self_99" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 101. 나는 남들이 부러워할 만한 장면을 일부러 연출하거나 기록해본 적이 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_100" value="1" required> 1</label>
-    <label><input type="radio" name="self_100" value="2" required> 2</label>
-    <label><input type="radio" name="self_100" value="3" required> 3</label>
-    <label><input type="radio" name="self_100" value="4" required> 4</label>
-    <label><input type="radio" name="self_100" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 102. 나는 내가 누리는 것을 자랑한다고 느끼진 않지만, 멋지게 보이길 바라는 마음은 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_101" value="1" required> 1</label>
-    <label><input type="radio" name="self_101" value="2" required> 2</label>
-    <label><input type="radio" name="self_101" value="3" required> 3</label>
-    <label><input type="radio" name="self_101" value="4" required> 4</label>
-    <label><input type="radio" name="self_101" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 103. 나는 최신 브랜드나 명품 정보를 놓치지 않으려 자주 검색하거나 비교한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_102" value="1" required> 1</label>
-    <label><input type="radio" name="self_102" value="2" required> 2</label>
-    <label><input type="radio" name="self_102" value="3" required> 3</label>
-    <label><input type="radio" name="self_102" value="4" required> 4</label>
-    <label><input type="radio" name="self_102" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 104. 나는 돈을 쓰더라도 내 취향이나 수준을 표현할 수 있는 소비에 만족감을 느낀다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_103" value="1" required> 1</label>
-    <label><input type="radio" name="self_103" value="2" required> 2</label>
-    <label><input type="radio" name="self_103" value="3" required> 3</label>
-    <label><input type="radio" name="self_103" value="4" required> 4</label>
-    <label><input type="radio" name="self_103" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 105. 나는 사람들 사이에서 '있는 사람', '성공한 사람'처럼 보이고 싶어 할 때가 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_104" value="1" required> 1</label>
-    <label><input type="radio" name="self_104" value="2" required> 2</label>
-    <label><input type="radio" name="self_104" value="3" required> 3</label>
-    <label><input type="radio" name="self_104" value="4" required> 4</label>
-    <label><input type="radio" name="self_104" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 106. 나는 명품이나 고급 서비스를 접할 때 특별한 기분이나 자부심을 느낀다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_105" value="1" required> 1</label>
-    <label><input type="radio" name="self_105" value="2" required> 2</label>
-    <label><input type="radio" name="self_105" value="3" required> 3</label>
-    <label><input type="radio" name="self_105" value="4" required> 4</label>
-    <label><input type="radio" name="self_105" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 107. 나는 내 소비나 선택이 누군가에게 '부럽다'는 감정을 일으키면 뿌듯해한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_106" value="1" required> 1</label>
-    <label><input type="radio" name="self_106" value="2" required> 2</label>
-    <label><input type="radio" name="self_106" value="3" required> 3</label>
-    <label><input type="radio" name="self_106" value="4" required> 4</label>
-    <label><input type="radio" name="self_106" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 108. 나는 돈이 항상 부족하다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_107" value="1" required> 1</label>
-    <label><input type="radio" name="self_107" value="2" required> 2</label>
-    <label><input type="radio" name="self_107" value="3" required> 3</label>
-    <label><input type="radio" name="self_107" value="4" required> 4</label>
-    <label><input type="radio" name="self_107" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 109. 나는 돈에 대한 걱정 때문에 잠을 설치는 경우가 많다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_108" value="1" required> 1</label>
-    <label><input type="radio" name="self_108" value="2" required> 2</label>
-    <label><input type="radio" name="self_108" value="3" required> 3</label>
-    <label><input type="radio" name="self_108" value="4" required> 4</label>
-    <label><input type="radio" name="self_108" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 110. 나는 내 재정 상황을 생각하면 불안하거나 압도당하는 기분이 든다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_109" value="1" required> 1</label>
-    <label><input type="radio" name="self_109" value="2" required> 2</label>
-    <label><input type="radio" name="self_109" value="3" required> 3</label>
-    <label><input type="radio" name="self_109" value="4" required> 4</label>
-    <label><input type="radio" name="self_109" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 111. 나는 돈이 없으면 늘 불안하다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_110" value="1" required> 1</label>
-    <label><input type="radio" name="self_110" value="2" required> 2</label>
-    <label><input type="radio" name="self_110" value="3" required> 3</label>
-    <label><input type="radio" name="self_110" value="4" required> 4</label>
-    <label><input type="radio" name="self_110" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 112. 나는 세상의 대부분의 문제는 결국 돈으로 해결할 수 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_111" value="1" required> 1</label>
-    <label><input type="radio" name="self_111" value="2" required> 2</label>
-    <label><input type="radio" name="self_111" value="3" required> 3</label>
-    <label><input type="radio" name="self_111" value="4" required> 4</label>
-    <label><input type="radio" name="self_111" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 113. 나는 돈이 나에게 자유와 권력을 가져다주는 수단이라고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_112" value="1" required> 1</label>
-    <label><input type="radio" name="self_112" value="2" required> 2</label>
-    <label><input type="radio" name="self_112" value="3" required> 3</label>
-    <label><input type="radio" name="self_112" value="4" required> 4</label>
-    <label><input type="radio" name="self_112" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 114. 나는 때로는 가족이나 관계보다 돈을 더 중요하게 생각할 때가 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_113" value="1" required> 1</label>
-    <label><input type="radio" name="self_113" value="2" required> 2</label>
-    <label><input type="radio" name="self_113" value="3" required> 3</label>
-    <label><input type="radio" name="self_113" value="4" required> 4</label>
-    <label><input type="radio" name="self_113" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 115. 나는 돈 때문에 소중한 관계가 소원해진 경험이 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_114" value="1" required> 1</label>
-    <label><input type="radio" name="self_114" value="2" required> 2</label>
-    <label><input type="radio" name="self_114" value="3" required> 3</label>
-    <label><input type="radio" name="self_114" value="4" required> 4</label>
-    <label><input type="radio" name="self_114" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 116. 나는 남들에게 뒤처지지 않기 위해 돈을 벌어야 한다는 압박감을 느낀다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_115" value="1" required> 1</label>
-    <label><input type="radio" name="self_115" value="2" required> 2</label>
-    <label><input type="radio" name="self_115" value="3" required> 3</label>
-    <label><input type="radio" name="self_115" value="4" required> 4</label>
-    <label><input type="radio" name="self_115" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 117. 나는 나의 사회적 지위가 내가 가진 돈이나 재산에 의해 결정된다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_116" value="1" required> 1</label>
-    <label><input type="radio" name="self_116" value="2" required> 2</label>
-    <label><input type="radio" name="self_116" value="3" required> 3</label>
-    <label><input type="radio" name="self_116" value="4" required> 4</label>
-    <label><input type="radio" name="self_116" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 118. 나는 다른 사람들과 비교했을 때 내 재정 상태가 부족하다고 느낄 때가 많다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_117" value="1" required> 1</label>
-    <label><input type="radio" name="self_117" value="2" required> 2</label>
-    <label><input type="radio" name="self_117" value="3" required> 3</label>
-    <label><input type="radio" name="self_117" value="4" required> 4</label>
-    <label><input type="radio" name="self_117" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 119. 나는 나의 가치나 자존감이 내가 얼마나 돈을 버는지에 달려있다고 생각한다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_118" value="1" required> 1</label>
-    <label><input type="radio" name="self_118" value="2" required> 2</label>
-    <label><input type="radio" name="self_118" value="3" required> 3</label>
-    <label><input type="radio" name="self_118" value="4" required> 4</label>
-    <label><input type="radio" name="self_118" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 120. 나는 돈이 많을수록 내가 더 가치 있는 사람이라고 느껴진다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_119" value="1" required> 1</label>
-    <label><input type="radio" name="self_119" value="2" required> 2</label>
-    <label><input type="radio" name="self_119" value="3" required> 3</label>
-    <label><input type="radio" name="self_119" value="4" required> 4</label>
-    <label><input type="radio" name="self_119" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 121. 나는 돈 이야기를 하는 것이 불편하거나 불안하다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_120" value="1" required> 1</label>
-    <label><input type="radio" name="self_120" value="2" required> 2</label>
-    <label><input type="radio" name="self_120" value="3" required> 3</label>
-    <label><input type="radio" name="self_120" value="4" required> 4</label>
-    <label><input type="radio" name="self_120" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 122. 나는 은행 잔고를 확인하는 것을 두려워해서 피하는 경우가 있다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_121" value="1" required> 1</label>
-    <label><input type="radio" name="self_121" value="2" required> 2</label>
-    <label><input type="radio" name="self_121" value="3" required> 3</label>
-    <label><input type="radio" name="self_121" value="4" required> 4</label>
-    <label><input type="radio" name="self_121" value="5" required> 5</label>
-  </div>
-</div>
-
-<div class="question">
-  <div class="question-title">Self-Report 123. 나는 돈이 없으면 주변에서 무시당한다고 느껴진다고 비춰진다.</div>
-  <div class="options">
-    <label><input type="radio" name="self_122" value="1" required> 1</label>
-    <label><input type="radio" name="self_122" value="2" required> 2</label>
-    <label><input type="radio" name="self_122" value="3" required> 3</label>
-    <label><input type="radio" name="self_122" value="4" required> 4</label>
-    <label><input type="radio" name="self_122" value="5" required> 5</label>
-  </div>
-</div>
-<!-- ─────────────── Perceived 1~123 ─────────────── -->
+    <!-- ─────────────── Self-Report 1부터 Self-Report 123까지 총 123개 문항 블록 -->
+    <!-- name 속성은 self_0, self_1, …, self_122 순서대로 지정합니다.           -->
+    <!-- value는 1~5, 첫 번째 라디오에만 required 속성을 걸었습니다.             -->
+    <!-- ─────────────────────────────────────────────────────────────────── -->
+<!-- ─────────────────────────────────────────────────────────────────── -->
+<!-- Perceived 1부터 Perceived 123까지 총 123개 문항 블록 -->
+<!-- name 속성은 perceived_0, perceived_1, …, perceived_122 순서대로 지정합니다. -->
+<!-- value는 1~5, 첫 번째 라디오에만 required 속성을 걸었습니다. -->
+<!-- ─────────────────────────────────────────────────────────────────── -->
 
 <div class="question">
   <div class="question-title">Perceived 1. 나는 주변의 평가나 시선에 크게 영향을 받지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_0" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_0" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_0" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_0" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_0" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_0" value="2"> 2</label>
+    <label><input type="radio" name="perceived_0" value="3"> 3</label>
+    <label><input type="radio" name="perceived_0" value="4"> 4</label>
+    <label><input type="radio" name="perceived_0" value="5"> 5</label>
   </div>
 </div>
 
@@ -1419,10 +73,10 @@
   <div class="question-title">Perceived 2. 주변에서 종종 '특이하다'는 말을 듣거나, 생각이 독창적이라는 평가를 받는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_1" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_1" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_1" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_1" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_1" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_1" value="2"> 2</label>
+    <label><input type="radio" name="perceived_1" value="3"> 3</label>
+    <label><input type="radio" name="perceived_1" value="4"> 4</label>
+    <label><input type="radio" name="perceived_1" value="5"> 5</label>
   </div>
 </div>
 
@@ -1430,10 +84,10 @@
   <div class="question-title">Perceived 3. 타인의 명령이나 위계적 구조보다는 내 방식대로 움직이고 싶어 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_2" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_2" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_2" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_2" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_2" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_2" value="2"> 2</label>
+    <label><input type="radio" name="perceived_2" value="3"> 3</label>
+    <label><input type="radio" name="perceived_2" value="4"> 4</label>
+    <label><input type="radio" name="perceived_2" value="5"> 5</label>
   </div>
 </div>
 
@@ -1441,10 +95,10 @@
   <div class="question-title">Perceived 4. 다수가 옳다고 해도 나만의 기준을 쉽게 포기하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_3" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_3" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_3" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_3" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_3" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_3" value="2"> 2</label>
+    <label><input type="radio" name="perceived_3" value="3"> 3</label>
+    <label><input type="radio" name="perceived_3" value="4"> 4</label>
+    <label><input type="radio" name="perceived_3" value="5"> 5</label>
   </div>
 </div>
 
@@ -1452,1322 +106,1314 @@
   <div class="question-title">Perceived 5. 혼자서 집중하는 시간을 매우 소중히 여기며, 팀플레이보다 개인 작업을 선호한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_4" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_4" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_4" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_4" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_4" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_4" value="2"> 2</label>
+    <label><input type="radio" name="perceived_4" value="3"> 3</label>
+    <label><input type="radio" name="perceived_4" value="4"> 4</label>
+    <label><input type="radio" name="perceived_4" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 6. 얽매이거나 구속받는 것에 대한 반감이 강한 편이다.</div>
+  <div class="question-title">Perceived 6. 새로운 아이디어를 시도할 때, 실패해도 나 스스로 나아갈 수 있다고 믿는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_5" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_5" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_5" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_5" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_5" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_5" value="2"> 2</label>
+    <label><input type="radio" name="perceived_5" value="3"> 3</label>
+    <label><input type="radio" name="perceived_5" value="4"> 4</label>
+    <label><input type="radio" name="perceived_5" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 7. 주변 사람에게 크게 신경 쓰지 않는 편이고, 무심하다는 말을 자주 듣는다.</div>
+  <div class="question-title">Perceived 7. 주변 사람들의 기분이나 감정 상태를 살피는 것보다 내 생각에 집중하려고 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_6" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_6" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_6" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_6" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_6" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_6" value="2"> 2</label>
+    <label><input type="radio" name="perceived_6" value="3"> 3</label>
+    <label><input type="radio" name="perceived_6" value="4"> 4</label>
+    <label><input type="radio" name="perceived_6" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 8. 권위에 복종하는 것에 대해 본능적인 저항감을 느낀다.</div>
+  <div class="question-title">Perceived 8. 다수가 하는 일보다 내가 스스로 계획한 일을 해낼 때 더 큰 만족감을 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_7" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_7" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_7" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_7" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_7" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_7" value="2"> 2</label>
+    <label><input type="radio" name="perceived_7" value="3"> 3</label>
+    <label><input type="radio" name="perceived_7" value="4"> 4</label>
+    <label><input type="radio" name="perceived_7" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 9. 말투가 자기 중심적으로 비춰져 오해를 받기도 한다.</div>
+  <div class="question-title">Perceived 9. 중요한 결정을 할 때 주변 사람들의 의견보다는 내 직관을 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_8" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_8" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_8" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_8" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_8" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_8" value="2"> 2</label>
+    <label><input type="radio" name="perceived_8" value="3"> 3</label>
+    <label><input type="radio" name="perceived_8" value="4"> 4</label>
+    <label><input type="radio" name="perceived_8" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 10. 처음 관심을 가졌던 일도 쉽게 시들해지는 편이다.</div>
+  <div class="question-title">Perceived 10. 새로운 환경이나 사람에게 쉽게 적응하는 것보다 내 방식대로 천천히 적응하는 것이 더 편하다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_9" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_9" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_9" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_9" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_9" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_9" value="2"> 2</label>
+    <label><input type="radio" name="perceived_9" value="3"> 3</label>
+    <label><input type="radio" name="perceived_9" value="4"> 4</label>
+    <label><input type="radio" name="perceived_9" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 11. 누군가의 기대나 규칙에 따르기보다는 스스로 설정한 방향을 선호한다.</div>
+  <div class="question-title">Perceived 11. 사람들과 어울리기보다 혼자 있는 시간이 더 마음이 편안하다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_10" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_10" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_10" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_10" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_10" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_10" value="2"> 2</label>
+    <label><input type="radio" name="perceived_10" value="3"> 3</label>
+    <label><input type="radio" name="perceived_10" value="4"> 4</label>
+    <label><input type="radio" name="perceived_10" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 12. 타인의 시선을 넘어서 나만의 기준과 이상을 좇는다.</div>
+  <div class="question-title">Perceived 12. 타인의 기대에 부응하기보다 내 목표를 우선시하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_11" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_11" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_11" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_11" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_11" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_11" value="2"> 2</label>
+    <label><input type="radio" name="perceived_11" value="3"> 3</label>
+    <label><input type="radio" name="perceived_11" value="4"> 4</label>
+    <label><input type="radio" name="perceived_11" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 13. 스스로 만든 기준이나 프레임이 삶을 이끄는 나침반이 된다.</div>
+  <div class="question-title">Perceived 13. 누군가가 나를 보고 있다고 생각하면 행동이 달라질 때가 많다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_12" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_12" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_12" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_12" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_12" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_12" value="2"> 2</label>
+    <label><input type="radio" name="perceived_12" value="3"> 3</label>
+    <label><input type="radio" name="perceived_12" value="4"> 4</label>
+    <label><input type="radio" name="perceived_12" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 14. 나의 독립성과 자율성은 쉽게 양보할 수 없는 가치다.</div>
+  <div class="question-title">Perceived 14. 일을 처리할 때 다른 사람의 간섭 없이 혼자 해결하는 것을 더 좋아한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_13" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_13" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_13" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_13" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_13" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_13" value="2"> 2</label>
+    <label><input type="radio" name="perceived_13" value="3"> 3</label>
+    <label><input type="radio" name="perceived_13" value="4"> 4</label>
+    <label><input type="radio" name="perceived_13" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 15. 나는 나의 가치와 신념에 따라 일관되게 행동한다고 생각한다.</div>
+  <div class="question-title">Perceived 15. 주변 사람이 나를 어떻게 생각하든 상관하지 않고 나만의 일을 처리한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_14" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_14" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_14" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_14" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_14" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_14" value="2"> 2</label>
+    <label><input type="radio" name="perceived_14" value="3"> 3</label>
+    <label><input type="radio" name="perceived_14" value="4"> 4</label>
+    <label><input type="radio" name="perceived_14" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 16. 현실보다는 상상과 관찰에서 아이디어를 얻고, 새로운 관점을 즐겨 탐색한다.</div>
+  <div class="question-title">Perceived 16. 다른 사람과 의견이 달라도 내 의견을 쉽게 굽히지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_15" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_15" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_15" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_15" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_15" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_15" value="2"> 2</label>
+    <label><input type="radio" name="perceived_15" value="3"> 3</label>
+    <label><input type="radio" name="perceived_15" value="4"> 4</label>
+    <label><input type="radio" name="perceived_15" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 17. 기존의 틀보다는 나만의 방식으로 문제를 해결하려 한다.</div>
+  <div class="question-title">Perceived 17. 나는 팀에서 지시받기보다는 스스로 계획한 일을 수행하는 것을 선호한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_16" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_16" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_16" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_16" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_16" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_16" value="2"> 2</label>
+    <label><input type="radio" name="perceived_16" value="3"> 3</label>
+    <label><input type="radio" name="perceived_16" value="4"> 4</label>
+    <label><input type="radio" name="perceived_16" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 18. 감정의 결이 섬세하고, 예술이나 색감, 리듬 등에 민감한 편이다.</div>
+  <div class="question-title">Perceived 18. 혼자서 일할 때 더 효율이 높다고 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_17" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_17" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_17" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_17" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_17" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_17" value="2"> 2</label>
+    <label><input type="radio" name="perceived_17" value="3"> 3</label>
+    <label><input type="radio" name="perceived_17" value="4"> 4</label>
+    <label><input type="radio" name="perceived_17" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 19. 내면의 불안이나 복잡한 감정에 사로잡히는 순간이 종종 있다.</div>
+  <div class="question-title">Perceived 19. 사람들 앞에서 발표하거나 설명하는 것보다, 내용을 먼저 정리하고 준비하는 시간이 더 필요하다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_18" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_18" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_18" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_18" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_18" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_18" value="2"> 2</label>
+    <label><input type="radio" name="perceived_18" value="3"> 3</label>
+    <label><input type="radio" name="perceived_18" value="4"> 4</label>
+    <label><input type="radio" name="perceived_18" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 20. 개인적인 생각이나 상상 속 세계에 몰입해 외부와 단절된 듯한 시간을 자주 경험한다.</div>
+  <div class="question-title">Perceived 20. 나는 스스로의 기준에 맞추어 행동하지, 다른 사람의 기준에 맞추어 행동하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_19" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_19" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_19" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_19" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_19" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_19" value="2"> 2</label>
+    <label><input type="radio" name="perceived_19" value="3"> 3</label>
+    <label><input type="radio" name="perceived_19" value="4"> 4</label>
+    <label><input type="radio" name="perceived_19" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 21. 엉뚱하다는 말을 자주 듣고, 나만의 세계관이 뚜렷하다는 평을 받는다.</div>
+  <div class="question-title">Perceived 21. 그룹 프로젝트보다 개인 프로젝트를 할 때 만족도가 더 높다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_20" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_20" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_20" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_20" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_20" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_20" value="2"> 2</label>
+    <label><input type="radio" name="perceived_20" value="3"> 3</label>
+    <label><input type="radio" name="perceived_20" value="4"> 4</label>
+    <label><input type="radio" name="perceived_20" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 22. 사물이나 사건에서 남들과 다른 방식으로 의미를 찾으려 한다.</div>
+  <div class="question-title">Perceived 22. 나는 보통 사람들보다 독립적으로 결정을 내리는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_21" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_21" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_21" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_21" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_21" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_21" value="2"> 2</label>
+    <label><input type="radio" name="perceived_21" value="3"> 3</label>
+    <label><input type="radio" name="perceived_21" value="4"> 4</label>
+    <label><input type="radio" name="perceived_21" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 23. 일상의 아름다움이나 상징을 민감하게 포착하는 편이다.</div>
+  <div class="question-title">Perceived 23. 사람들 앞에서 내 의견을 강하게 주장하기보다, 내 의견을 따로 메모하거나 기록한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_22" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_22" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_22" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_22" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_22" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_22" value="2"> 2</label>
+    <label><input type="radio" name="perceived_22" value="3"> 3</label>
+    <label><input type="radio" name="perceived_22" value="4"> 4</label>
+    <label><input type="radio" name="perceived_22" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 24. 창의적인 작업에 몰입할 때 행복을 느낀다.</div>
+  <div class="question-title">Perceived 24. 나는 다른 사람의 기대보다 내 기준대로 성과를 내는 것이 더 중요하다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_23" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_23" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_23" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_23" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_23" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_23" value="2"> 2</label>
+    <label><input type="radio" name="perceived_23" value="3"> 3</label>
+    <label><input type="radio" name="perceived_23" value="4"> 4</label>
+    <label><input type="radio" name="perceived_23" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 25. 독창성과 개성을 유지하기 위해 스스로를 고립시키기도 한다.</div>
+  <div class="question-title">Perceived 25. 나는 종종 내 방식대로 문제를 해결하기 위해 새로운 방법을 시도한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_24" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_24" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_24" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_24" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_24" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_24" value="2"> 2</label>
+    <label><input type="radio" name="perceived_24" value="3"> 3</label>
+    <label><input type="radio" name="perceived_24" value="4"> 4</label>
+    <label><input type="radio" name="perceived_24" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 26. 직관이나 영감을 신뢰하며, 그것이 삶의 방향성을 정한다.</div>
+  <div class="question-title">Perceived 26. 사람이 많은 곳보다는 조용한 곳에서 더 집중이 잘 된다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_25" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_25" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_25" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_25" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_25" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_25" value="2"> 2</label>
+    <label><input type="radio" name="perceived_25" value="3"> 3</label>
+    <label><input type="radio" name="perceived_25" value="4"> 4</label>
+    <label><input type="radio" name="perceived_25" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 27. 내 삶은 하나의 창작물처럼 꾸며지고 채워져야 한다고 느낀다.</div>
+  <div class="question-title">Perceived 27. 중요한 결정을 할 때 다른 사람의 조언보다 내 내면의 목소리에 더 귀 기울인다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_26" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_26" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_26" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_26" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_26" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_26" value="2"> 2</label>
+    <label><input type="radio" name="perceived_26" value="3"> 3</label>
+    <label><input type="radio" name="perceived_26" value="4"> 4</label>
+    <label><input type="radio" name="perceived_26" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 28. 나는 새로운 아이디어나 경험에 대해 열린 마음을 가지고 있다.</div>
+  <div class="question-title">Perceived 28. 나는 다른 사람과 계획을 공유하기보다는, 내가 알아서 판단하는 것을 선호한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_27" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_27" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_27" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_27" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_27" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_27" value="2"> 2</label>
+    <label><input type="radio" name="perceived_27" value="3"> 3</label>
+    <label><input type="radio" name="perceived_27" value="4"> 4</label>
+    <label><input type="radio" name="perceived_27" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 29. 명확한 이유 없이 무력감이나 불안감에 빠질 때가 있다.</div>
+  <div class="question-title">Perceived 29. 나는 누군가가 나를 어떻게 볼지 걱정하기보다는 내 일에 몰두한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_28" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_28" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_28" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_28" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_28" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_28" value="2"> 2</label>
+    <label><input type="radio" name="perceived_28" value="3"> 3</label>
+    <label><input type="radio" name="perceived_28" value="4"> 4</label>
+    <label><input type="radio" name="perceived_28" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 30. 세상살이에 대한 막연한 두려움이나 회피하고 싶은 감정이 내게 익숙하다.</div>
+  <div class="question-title">Perceived 30. 나는 새로운 관점을 받아들이기 전에 내 관점을 먼저 확인한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_29" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_29" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_29" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_29" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_29" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_29" value="2"> 2</label>
+    <label><input type="radio" name="perceived_29" value="3"> 3</label>
+    <label><input type="radio" name="perceived_29" value="4"> 4</label>
+    <label><input type="radio" name="perceived_29" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 31. 평온하고 예측 가능한 환경에서 정서적 안정을 느낀다.</div>
+  <div class="question-title">Perceived 31. 자신의 감정이나 생각을 다른 사람과 공유하기보다, 스스로 정리하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_30" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_30" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_30" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_30" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_30" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_30" value="2"> 2</label>
+    <label><input type="radio" name="perceived_30" value="3"> 3</label>
+    <label><input type="radio" name="perceived_30" value="4"> 4</label>
+    <label><input type="radio" name="perceived_30" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 32. 가까운 사람의 말이나 반응에 지나치게 영향을 받는 경향이 있다.</div>
-  <div class="options">
+  <div class="QUESTION-TITLE">Perceived 32. 나는 보통 나의 기준을 지키기 위해 주변의 압박을 무시한다.</div>
+  <div class="OPTIONS">
     <label><input type="radio" name="perceived_31" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_31" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_31" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_31" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_31" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_31" value="2"> 2</label>
+    <label><input type="radio" name="perceived_31" value="3"> 3</label>
+    <label><input type="radio" name="perceived_31" value="4"> 4</label>
+    <label><input type="radio" name="perceived_31" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 33. 실체 없는 불안이나 공허함을 종종 경험한다.</div>
+  <div class="question-title">Perceived 33. 나는 스스로 계획한 목표를 달성할 때, 다른 사람의 평가에 크게 의지하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_32" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_32" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_32" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_32" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_32" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_32" value="2"> 2</label>
+    <label><input type="radio" name="perceived_32" value="3"> 3</label>
+    <label><input type="radio" name="perceived_32" value="4"> 4</label>
+    <label><input type="radio" name="perceived_32" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 34. 불안감 때문에 때로는 현실보다 상상에 기대는 경향이 있다.</div>
+  <div class="question-title">Perceived 34. 나는 주로 혼자서 생각하는 것이 더 생산적이라고 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_33" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_33" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_33" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_33" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_33" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_33" value="2"> 2</label>
+    <label><input type="radio" name="perceived_33" value="3"> 3</label>
+    <label><input type="radio" name="perceived_33" value="4"> 4</label>
+    <label><input type="radio" name="perceived_33" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 35. 감정을 숨기며 타인에게 들키지 않으려 애쓴 적이 있다.</div>
+  <div class="question-title">Perceived 35. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_34" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_34" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_34" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_34" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_34" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_34" value="2"> 2</label>
+    <label><input type="radio" name="perceived_34" value="3"> 3</label>
+    <label><input type="radio" name="perceived_34" value="4"> 4</label>
+    <label><input type="radio" name="perceived_34" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 36. 불안을 해소하기 위해 주변을 통제하고 싶어질 때가 있다.</div>
+  <div class="question-title">Perceived 36. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_35" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_35" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_35" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_35" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_35" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_35" value="2"> 2</label>
+    <label><input type="radio" name="perceived_35" value="3"> 3</label>
+    <label><input type="radio" name="perceived_35" value="4"> 4</label>
+    <label><input type="radio" name="perceived_35" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 37. 마음속 감정이 정리가 안될 때 멍하게 보내는 시간이 많다.</div>
+  <div class="question-title">Perceived 37. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_36" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_36" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_36" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_36" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_36" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_36" value="2"> 2</label>
+    <label><input type="radio" name="perceived_36" value="3"> 3</label>
+    <label><input type="radio" name="perceived_36" value="4"> 4</label>
+    <label><input type="radio" name="perceived_36" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 38. 혼자만의 시간을 통해 정서적 균형을 맞추려 한다.</div>
+  <div class="question-title">Perceived 38. 다른 사람의 평가보다 나의 내면적 기준이 행동을 결정하게 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_37" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_37" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_37" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_37" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_37" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_37" value="2"> 2</label>
+    <label><input type="radio" name="perceived_37" value="3"> 3</label>
+    <label><input type="radio" name="perceived_37" value="4"> 4</label>
+    <label><input type="radio" name="perceived_37" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 39. 과거의 상처나 경험이 현재 선택과 감정에 영향을 주는 경우가 있다.</div>
+  <div class="question-title">Perceived 39. 나는 보통 사람들의 시선보다 내 목표에 집중하려 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_38" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_38" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_38" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_38" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_38" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_38" value="2"> 2</label>
+    <label><input type="radio" name="perceived_38" value="3"> 3</label>
+    <label><input type="radio" name="perceived_38" value="4"> 4</label>
+    <label><input type="radio" name="perceived_38" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 40. 물질적인 안정보다는 감정적, 관계적 안정이 더 큰 위안이 된다.</div>
+  <div class="question-title">Perceived 40. 나는 새로운 환경이나 사람에게 쉽게 적응하는 것보다 내 방식대로 천천히 적응하는 것이 더 편하다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_39" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_39" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_39" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_39" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_39" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_39" value="2"> 2</label>
+    <label><input type="radio" name="perceived_39" value="3"> 3</label>
+    <label><input type="radio" name="perceived_39" value="4"> 4</label>
+    <label><input type="radio" name="perceived_39" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 41. 내면 성장을 위해 노력하는 것이 삶의 중요한 목표 중 하나다.</div>
+  <div class="question-title">Perceived 41. 사람들과 어울리기보다 혼자 있는 시간이 더 마음이 편안하다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_40" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_40" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_40" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_40" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_40" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_40" value="2"> 2</label>
+    <label><input type="radio" name="perceived_40" value="3"> 3</label>
+    <label><input type="radio" name="perceived_40" value="4"> 4</label>
+    <label><input type="radio" name="perceived_40" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 42. 자아실현을 위한 여정에서 고통조차 의미 있다고 받아들인다.</div>
+  <div class="question-title">Perceived 42. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_41" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_41" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_41" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_41" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_41" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_41" value="2"> 2</label>
+    <label><input type="radio" name="perceived_41" value="3"> 3</label>
+    <label><input type="radio" name="perceived_41" value="4"> 4</label>
+    <label><input type="radio" name="perceived_41" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 43. 나는 스트레스 상황에서도 침착함을 유지하는 편이다.</div>
-  <div class="options">
+  <div class="question-title">Perceived 43. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
+  <div class="options">  
     <label><input type="radio" name="perceived_42" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_42" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_42" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_42" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_42" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_42" value="2"> 2</label>
+    <label><input type="radio" name="perceived_42" value="3"> 3</label>
+    <label><input type="radio" name="perceived_42" value="4"> 4</label>
+    <label><input type="radio" name="perceived_42" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 44. 감정이 격해지면 스스로도 다스리기 어려울 때가 있으며, 예민해지는 경향이 있다.</div>
+  <div class="question-title">Perceived 44. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_43" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_43" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_43" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_43" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_43" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_43" value="2"> 2</label>
+    <label><input type="radio" name="perceived_43" value="3"> 3</label>
+    <label><input type="radio" name="perceived_43" value="4"> 4</label>
+    <label><input type="radio" name="perceived_43" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 45. 많은 사람보다는 적은 수의 깊이 있는 관계를 추구한다.</div>
+  <div class="question-title">Perceived 45. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_44" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_44" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_44" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_44" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_44" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_44" value="2"> 2</label>
+    <label><input type="radio" name="perceived_44" value="3"> 3</label>
+    <label><input type="radio" name="perceived_44" value="4"> 4</label>
+    <label><input type="radio" name="perceived_44" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 46. 상대가 먼저 마음을 열어주기를 바라는 편이다.</div>
+  <div class="question-title">Perceived 46. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_45" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_45" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_45" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_45" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_45" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_45" value="2"> 2</label>
+    <label><input type="radio" name="perceived_45" value="3"> 3</label>
+    <label><input type="radio" name="perceived_45" value="4"> 4</label>
+    <label><input type="radio" name="perceived_45" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 47. 관계 안에서 인정받고, 진심을 이해받는 경험이 중요하다.</div>
+  <div class="question-title">Perceived 47. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_46" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_46" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_46" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_46" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_46" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_46" value="2"> 2</label>
+    <label><input type="radio" name="perceived_46" value="3"> 3</label>
+    <label><input type="radio" name="perceived_46" value="4"> 4</label>
+    <label><input type="radio" name="perceived_46" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 48. 말수가 적더라도 정서적으로 깊게 교류하는 관계에 만족을 느낀다.</div>
+  <div class="question-title">Perceived 48. 다른 사람의 평가보다 나의 내면적 기준이 행동을 결정하게 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_47" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_47" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_47" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_47" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_47" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_47" value="2"> 2</label>
+    <label><input type="radio" name="perceived_47" value="3"> 3</label>
+    <label><input type="radio" name="perceived_47" value="4"> 4</label>
+    <label><input type="radio" name="perceived_47" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 49. 서로가 진심을 나누는 순간에 강한 유대감을 느낀다.</div>
+  <div class="question-title">Perceived 49. 나는 보통 사람들의 시선보다 내 목표에 집중하려 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_48" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_48" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_48" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_48" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_48" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_48" value="2"> 2</label>
+    <label><input type="radio" name="perceived_48" value="3"> 3</label>
+    <label><input type="radio" name="perceived_48" value="4"> 4</label>
+    <label><input type="radio" name="perceived_48" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 50. 대인관계에서 피상적인 인사나 겉도는 대화에 피로감을 느낀다.</div>
+  <div class="question-title">Perceived 50. 나는 새로운 관점을 받아들이기 전에 내 관점을 먼저 확인한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_49" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_49" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_49" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_49" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_49" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_49" value="2"> 2</label>
+    <label><input type="radio" name="perceived_49" value="3"> 3</label>
+    <label><input type="radio" name="perceived_49" value="4"> 4</label>
+    <label><input type="radio" name="perceived_49" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 51. 거절이나 충돌을 피하기 위해 솔직한 감정을 숨긴 적이 있다.</div>
+  <div class="question-title">Perceived 51. 자신의 감정이나 생각을 다른 사람과 공유하기보다, 스스로 정리하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_50" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_50" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_50" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_50" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_50" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_50" value="2"> 2</label>
+    <label><input type="radio" name="perceived_50" value="3"> 3</label>
+    <label><input type="radio" name="perceived_50" value="4"> 4</label>
+    <label><input type="radio" name="perceived_50" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 52. 관계가 깊어지면 정서적으로 과도하게 몰입하게 되는 편이다.</div>
+  <div class="question-title">Perceived 52. 나는 보통 나의 기준을 지키기 위해 주변의 압박을 무시한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_51" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_51" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_51" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_51" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_51" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_51" value="2"> 2</label>
+    <label><input type="radio" name="perceived_51" value="3"> 3</label>
+    <label><input type="radio" name="perceived_51" value="4"> 4</label>
+    <label><input type="radio" name="perceived_51" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 53. 누군가와의 관계에서 감정적 안정감을 얻고 싶다는 바람이 있다.</div>
+  <div class="question-title">Perceived 53. 나는 스스로 계획한 목표를 달성할 때, 다른 사람의 평가에 크게 의지하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_52" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_52" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_52" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_52" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_52" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_52" value="2"> 2</label>
+    <label><input type="radio" name="perceived_52" value="3"> 3</label>
+    <label><input type="radio" name="perceived_52" value="4"> 4</label>
+    <label><input type="radio" name="perceived_52" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 54. 타인의 진심을 파악하려는 경향이 강해 눈치에 민감해진다.</div>
+  <div class="question-title">Perceived 54. 나는 주로 혼자서 생각하는 것이 더 생산적이라고 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_53" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_53" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_53" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_53" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_53" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_53" value="2"> 2</label>
+    <label><input type="radio" name="perceived_53" value="3"> 3</label>
+    <label><input type="radio" name="perceived_53" value="4"> 4</label>
+    <label><input type="radio" name="perceived_53" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 55. 내 생각이 잘 받아들여질 때 깊은 만족과 소속감을 느낀다.</div>
+  <div class="question-title">Perceived 55. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_54" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_54" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_54" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_54" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_54" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_54" value="2"> 2</label>
+    <label><input type="radio" name="perceived_54" value="3"> 3</label>
+    <label><input type="radio" name="perceived_54" value="4"> 4</label>
+    <label><input type="radio" name="perceived_54" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 56. 나는 사람들 앞에서 말하는 것을 즐기며 에너지를 얻는다.</div>
+  <div class="question-title">Perceived 56. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_55" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_55" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_55" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_55" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_55" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_55" value="2"> 2</label>
+    <label><input type="radio" name="perceived_55" value="3"> 3</label>
+    <label><input type="radio" name="perceived_55" value="4"> 4</label>
+    <label><input type="radio" name="perceived_55" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 57. 나는 타인의 감정을 잘 이해하고 공감하는 편이다.</div>
+  <div class="question-title">Perceived 57. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_56" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_56" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_56" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_56" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_56" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_56" value="2"> 2</label>
+    <label><input type="radio" name="perceived_56" value="3"> 3</label>
+    <label><input type="radio" name="perceived_56" value="4"> 4</label>
+    <label><input type="radio" name="perceived_56" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 58. 타인의 감정선이나 분위기를 잘 읽지만, 표현에 있어 조심스러움을 느낀다.</div>
+  <div class="question-title">Perceived 58. 다른 사람의 평가보다 나의 내면적 기준이 행동을 결정하게 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_57" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_57" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_57" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_57" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_57" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_57" value="2"> 2</label>
+    <label><input type="radio" name="perceived_57" value="3"> 3</label>
+    <label><input type="radio" name="perceived_57" value="4"> 4</label>
+    <label><input type="radio" name="perceived_57" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 59. 맡은 일에서 높은 수준의 결과를 만들기 위해 노력한다.</div>
+  <div class="question-title">Perceived 59. 나는 보통 사람들의 시선보다 내 목표에 집중하려 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_58" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_58" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_58" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_58" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_58" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_58" value="2"> 2</label>
+    <label><input type="radio" name="perceived_58" value="3"> 3</label>
+    <label><input type="radio" name="perceived_58" value="4"> 4</label>
+    <label><input type="radio" name="perceived_58" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 60. 평가와 피드백을 통해 스스로를 더 발전시키려 한다.</div>
+  <div class="question-title">Perceived 60. 나는 새로운 관점을 받아들이기 전에 내 관점을 먼저 확인한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_59" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_59" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_59" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_59" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_59" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_59" value="2"> 2</label>
+    <label><input type="radio" name="perceived_59" value="3"> 3</label>
+    <label><input type="radio" name="perceived_59" value="4"> 4</label>
+    <label><input type="radio" name="perceived_59" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 61. 빠른 속도보다는 꼼꼼하고 계획적인 처리를 선호한다.</div>
+  <div class="question-title">Perceived 61. 자신의 감정이나 생각을 다른 사람과 공유하기보다, 스스로 정리하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_60" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_60" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_60" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_60" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_60" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_60" value="2"> 2</label>
+    <label><input type="radio" name="perceived_60" value="3"> 3</label>
+    <label><input type="radio" name="perceived_60" value="4"> 4</label>
+    <label><input type="radio" name="perceived_60" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 62. 책임이 명확하지 않거나 즉흥적인 상황에서 불편함을 느낀다.</div>
+  <div class="question-title">Perceived 62. 나는 보통 나의 기준을 지키기 위해 주변의 압박을 무시한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_61" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_61" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_61" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_61" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_61" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_61" value="2"> 2</label>
+    <label><input type="radio" name="perceived_61" value="3"> 3</label>
+    <label><input type="radio" name="perceived_61" value="4"> 4</label>
+    <label><input type="radio" name="perceived_61" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 63. 감정보다는 논리와 체계를 통해 일에 접근하는 편이다.</div>
+  <div class="question-title">Perceived 63. 나는 스스로 계획한 목표를 달성할 때, 다른 사람의 평가에 크게 의지하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_62" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_62" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_62" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_62" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_62" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_62" value="2"> 2</label>
+    <label><input type="radio" name="perceived_62" value="3"> 3</label>
+    <label><input type="radio" name="perceived_62" value="4"> 4</label>
+    <label><input type="radio" name="perceived_62" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 64. 자율적인 방식으로 일할 때 능률이 더 오르는 편이다.</div>
+  <div class="question-title">Perceived 64. 나는 주로 혼자서 생각하는 것이 더 생산적이라고 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_63" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_63" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_63" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_63" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_63" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_63" value="2"> 2</label>
+    <label><input type="radio" name="perceived_63" value="3"> 3</label>
+    <label><input type="radio" name="perceived_63" value="4"> 4</label>
+    <label><input type="radio" name="perceived_63" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 65. 프로젝트를 시작할 때는 열정적이나 끝까지 유지하기 어렵다.</div>
+  <div class="question-title">Perceived 65. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_64" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_64" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_64" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_64" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_64" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_64" value="2"> 2</label>
+    <label><input type="radio" name="perceived_64" value="3"> 3</label>
+    <label><input type="radio" name="perceived_64" value="4"> 4</label>
+    <label><input type="radio" name="perceived_64" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 66. 결과보다 과정에서의 성취감이나 의미를 중시하는 편이다.</div>
+  <div class="question-title">Perceived 66. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_65" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_65" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_65" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_65" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_65" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_65" value="2"> 2</label>
+    <label><input type="radio" name="perceived_65" value="3"> 3</label>
+    <label><input type="radio" name="perceived_65" value="4"> 4</label>
+    <label><input type="radio" name="perceived_65" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 67. 모호한 역할이나 방향이 없을 때 혼란을 느낀다.</div>
+  <div class="question-title">Perceived 67. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_66" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_66" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_66" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_66" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_66" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_66" value="2"> 2</label>
+    <label><input type="radio" name="perceived_66" value="3"> 3</label>
+    <label><input type="radio" name="perceived_66" value="4"> 4</label>
+    <label><input type="radio" name="perceived_66" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 68. 반복되는 업무보다 새로운 아이디어를 요구하는 일을 선호한다.</div>
+  <div class="question-title">Perceived 68. 다른 사람의 평가보다 나의 내면적 기준이 행동을 결정하게 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_67" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_67" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_67" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_67" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_67" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_67" value="2"> 2</label>
+    <label><input type="radio" name="perceived_67" value="3"> 3</label>
+    <label><input type="radio" name="perceived_67" value="4"> 4</label>
+    <label><input type="radio" name="perceived_67" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 69. 성과에 대한 인정을 통해 존재감을 느낀다.</div>
+  <div class="question-title">Perceived 69. 나는 보통 사람들의 시선보다 내 목표에 집중하려 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_68" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_68" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_68" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_68" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_68" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_68" value="2"> 2</label>
+    <label><input type="radio" name="perceived_68" value="3"> 3</label>
+    <label><input type="radio" name="perceived_68" value="4"> 4</label>
+    <label><input type="radio" name="perceived_68" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 70. 커리어를 통해 자아를 실현하고 싶다는 열망이 강하다.</div>
+  <div class="question-title">Perceived 70. 나는 새로운 관점을 받아들이기 전에 내 관점을 먼저 확인한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_69" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_69" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_69" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_69" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_69" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_69" value="2"> 2</label>
+    <label><input type="radio" name="perceived_69" value="3"> 3</label>
+    <label><input type="radio" name="perceived_69" value="4"> 4</label>
+    <label><input type="radio" name="perceived_69" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 71. 조직 안에서 리더나 중심이 되기를 꺼리지는 않는다.</div>
+  <div class="question-title">Perceived 71. 자신의 감정이나 생각을 다른 사람과 공유하기보다, 스스로 정리하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_70" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_70" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_70" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_70" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_70" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_70" value="2"> 2</label>
+    <label><input type="radio" name="perceived_70" value="3"> 3</label>
+    <label><input type="radio" name="perceived_70" value="4"> 4</label>
+    <label><input type="radio" name="perceived_70" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 72. 구체적인 성과나 결과물이 없을 때 불안함을 느낀다.</div>
+  <div class="QUESTION-TITLE">Perceived 72. 나는 보통 나의 기준을 지키기 위해 주변의 압박을 무시한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_71" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_71" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_71" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_71" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_71" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_71" value="2"> 2</label>
+    <label><input type="radio" name="perceived_71" value="3"> 3</label>
+    <label><input type="radio" name="perceived_71" value="4"> 4</label>
+    <label><input type="radio" name="perceived_71" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 73. 목표 없는 반복은 삶을 공허하게 만든다고 느낀다.</div>
+  <div class="QUESTION-TITLE">Perceived 73. 나는 스스로 계획한 목표를 달성할 때, 다른 사람의 평가에 크게 의지하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_72" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_72" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_72" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_72" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_72" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_72" value="2"> 2</label>
+    <label><input type="radio" name="perceived_72" value="3"> 3</label>
+    <label><input type="radio" name="perceived_72" value="4"> 4</label>
+    <label><input type="radio" name="perceived_72" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 74. 내가 하는 일은 단순한 생계 수단이 아니라, 정체성의 표현이어야 한다.</div>
+  <div class="QUESTION-TITLE">Perceived 74. 나는 주로 혼자서 생각하는 것이 더 생산적이라고 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_73" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_73" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_73" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_73" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_73" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_73" value="2"> 2</label>
+    <label><input type="radio" name="perceived_73" value="3"> 3</label>
+    <label><input type="radio" name="perceived_73" value="4"> 4</label>
+    <label><input type="radio" name="perceived_73" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 75. 나는 계획을 철저히 세우고 지키는 편이다.</div>
+  <div class="QUESTION-TITLE">Perceived 75. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_74" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_74" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_74" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_74" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_74" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_74" value="2"> 2</label>
+    <label><input type="radio" name="perceived_74" value="3"> 3</label>
+    <label><input type="radio" name="perceived_74" value="4"> 4</label>
+    <label><input type="radio" name="perceived_74" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 76. 나는 그룹 내에서 나의 의견이 중요하게 받아들여진다고 (타인에게) 인식된다.</div>
+  <div class="QUESTION-TITLE">Perceived 76. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_75" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_75" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_75" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_75" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_75" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_75" value="2"> 2</label>
+    <label><input type="radio" name="perceived_75" value="3"> 3</label>
+    <label><input type="radio" name="perceived_75" value="4"> 4</label>
+    <label><input type="radio" name="perceived_75" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 77. 나는 구속당하거나 제한받는 상황을 견디기 어렵다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 77. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_76" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_76" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_76" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_76" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_76" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_76" value="2"> 2</label>
+    <label><input type="radio" name="perceived_76" value="3"> 3</label>
+    <label><input type="radio" name="perceived_76" value="4"> 4</label>
+    <label><input type="radio" name="perceived_76" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 78. 나는 반복적이고 틀이 정해진 일보다는 자유로운 구조를 선호한다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 78. 다른 사람의 평가보다 나의 내면적 기준이 행동을 결정하게 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_77" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_77" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_77" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_77" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_77" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_77" value="2"> 2</label>
+    <label><input type="radio" name="perceived_77" value="3"> 3</label>
+    <label><input type="radio" name="perceived_77" value="4"> 4</label>
+    <label><input type="radio" name="perceived_77" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 79. 나는 흥미를 잃으면 빠르게 관심이 식는 편이라고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 79. 나는 보통 사람들의 시선보다 내 목표에 집중하려 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_78" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_78" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_78" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_78" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_78" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_78" value="2"> 2</label>
+    <label><input type="radio" name="perceived_78" value="3"> 3</label>
+    <label><input type="radio" name="perceived_78" value="4"> 4</label>
+    <label><input type="radio" name="perceived_78" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 80. 나는 외부의 인정보다는 스스로의 만족과 의미를 중시한다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 80. 나는 새로운 관점을 받아들이기 전에 내 관점을 먼저 확인한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_79" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_79" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_79" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_79" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_79" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_79" value="2"> 2</label>
+    <label><input type="radio" name="perceived_79" value="3"> 3</label>
+    <label><input type="radio" name="perceived_79" value="4"> 4</label>
+    <label><input type="radio" name="perceived_79" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 81. 나는 특정한 시간, 공간, 사람에 얽매이는 것을 싫어한다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 81. 자신의 감정이나 생각을 다른 사람과 공유하기보다, 스스로 정리하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_80" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_80" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_80" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_80" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_80" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_80" value="2"> 2</label>
+    <label><input type="radio" name="perceived_80" value="3"> 3</label>
+    <label><input type="radio" name="perceived_80" value="4"> 4</label>
+    <label><input type="radio" name="perceived_80" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 82. 나는 무언가를 계속 유지하는 것보다 새로운 흐름에 반응하는 것이 자연스럽다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 82. 나는 보통 나의 기준을 지키기 위해 주변의 압박을 무시한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_81" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_81" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_81" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_81" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_81" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_81" value="2"> 2</label>
+    <label><input type="radio" name="perceived_81" value="3"> 3</label>
+    <label><input type="radio" name="perceived_81" value="4"> 4</label>
+    <label><input type="radio" name="perceived_81" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 83. 나는 스스로 삶의 리듬을 조절할 수 있을 때 안정감을 느낀다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 83. 나는 스스로 계획한 목표를 달성할 때, 다른 사람의 평가에 크게 의지하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_82" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_82" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_82" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_82" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_82" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_82" value="2"> 2</label>
+    <label><input type="radio" name="perceived_82" value="3"> 3</label>
+    <label><input type="radio" name="perceived_82" value="4"> 4</label>
+    <label><input type="radio" name="perceived_82" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 84. 나는 자발성이 없는 상황에서 창의력이 급격히 떨어진다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 84. 나는 주로 혼자서 생각하는 것이 더 생산적이라고 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_83" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_83" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_83" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_83" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_83" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_83" value="2"> 2</label>
+    <label><input type="radio" name="perceived_83" value="3"> 3</label>
+    <label><input type="radio" name="perceived_83" value="4"> 4</label>
+    <label><input type="radio" name="perceived_83" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 85. 나는 일의 흐름이 자연스럽고 유기적일 때 몰입이 쉬워진다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 85. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_84" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_84" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_84" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_84" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_84" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_84" value="2"> 2</label>
+    <label><input type="radio" name="perceived_84" value="3"> 3</label>
+    <label><input type="radio" name="perceived_84" value="4"> 4</label>
+    <label><input type="radio" name="perceived_84" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 86. 나는 누군가에게 통제당한다고 느낄 때 스트레스가 높아진다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 86. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_85" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_85" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_85" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_85" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_85" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_85" value="2"> 2</label>
+    <label><input type="radio" name="perceived_85" value="3"> 3</label>
+    <label><input type="radio" name="perceived_85" value="4"> 4</label>
+    <label><input type="radio" name="perceived_85" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 87. 나는 자율적인 환경에서 나만의 리듬으로 일할 때 몰입도가 높다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 87. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_86" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_86" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_86" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_86" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_86" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_86" value="2"> 2</label>
+    <label><input type="radio" name="perceived_86" value="3"> 3</label>
+    <label><input type="radio" name="perceived_86" value="4"> 4</label>
+    <label><input type="radio" name="perceived_86" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 88. 나는 감정의 변화에 민감하고, 주변 분위기에 쉽게 영향을 받는다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 88. 다른 사람의 평가보다 나의 내면적 기준이 행동을 결정하게 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_87" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_87" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_87" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_87" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_87" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_87" value="2"> 2</label>
+    <label><input type="radio" name="perceived_87" value="3"> 3</label>
+    <label><input type="radio" name="perceived_87" value="4"> 4</label>
+    <label><input type="radio" name="perceived_87" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 89. 나는 기분이 좋지 않을 땐 작은 일에도 예민하게 반응할 때가 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 89. 나는 보통 사람들의 시선보다 내 목표에 집중하려 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_88" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_88" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_88" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_88" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_88" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_88" value="2"> 2</label>
+    <label><input type="radio" name="perceived_88" value="3"> 3</label>
+    <label><input type="radio" name="perceived_88" value="4"> 4</label>
+    <label><input type="radio" name="perceived_88" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 90. 나는 감정을 명확히 표현하는 것이 어렵거나 두려울 때가 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 90. 나는 새로운 관점을 받아들이기 전에 내 관점을 먼저 확인한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_89" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_89" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_89" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_89" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_89" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_89" value="2"> 2</label>
+    <label><input type="radio" name="perceived_89" value="3"> 3</label>
+    <label><input type="radio" name="perceived_89" value="4"> 4</label>
+    <label><input type="radio" name="perceived_89" value="5"> 5</label>
   </div>
-</div>
+</div>  
 
 <div class="question">
-  <div class="question-title">Perceived 91. 나는 타인의 감정 상태를 민감하게 감지하는 편이라고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 91. 자신의 감정이나 생각을 다른 사람과 공유하기보다, 스스로 정리하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_90" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_90" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_90" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_90" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_90" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_90" value="2"> 2</label>
+    <label><input type="radio" name="perceived_90" value="3"> 3</label>
+    <label><input type="radio" name="perceived_90" value="4"> 4</label>
+    <label><input type="radio" name="perceived_90" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 92. 나는 감정의 골이 깊어지면 쉽게 회복되지 않는다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 92. 나는 보통 나의 기준을 지키기 위해 주변의 압박을 무시한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_91" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_91" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_91" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_91" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_91" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_91" value="2"> 2</label>
+    <label><input type="radio" name="perceived_91" value="3"> 3</label>
+    <label><input type="radio" name="perceived_91" value="4"> 4</label>
+    <label><input type="radio" name="perceived_91" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 93. 나는 정서적 불균형이 업무나 일상에 영향을 미치는 경우가 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 93. 나는 스스로 계획한 목표를 달성할 때, 다른 사람의 평가에 크게 의지하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_92" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_92" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_92" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_92" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_92" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_92" value="2"> 2</label>
+    <label><input type="radio" name="perceived_92" value="3"> 3</label>
+    <label><input type="radio" name="perceived_92" value="4"> 4</label>
+    <label><input type="radio" name="perceived_92" value="5"> 5</label>
   </div>
 </div>
 
-<div class="question">
-  <div class="question-title">Perceived 94. 나는 나를 이해해주는 사람에게만 감정을 자연스럽게 드러낸다고 비춰진다.</div>
+<div class="QUESTION">
+  <div class="QUESTION-TITLE">Perceived 94. 나는 주로 혼자서 생각하는 것이 더 생산적이라고 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_93" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_93" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_93" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_93" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_93" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_93" value="2"> 2</label>
+    <label><input type="radio" name="perceived_93" value="3"> 3</label>
+    <label><input type="radio" name="perceived_93" value="4"> 4</label>
+    <label><input type="radio" name="perceived_93" value="5"> 5</label>
   </div>
 </div>
 
-<div class="question">
-  <div class="question-title">Perceived 95. 나는 기분이 좋을 땐 주변에 긍정 에너지를 주기도 한다고 비춰진다.</div>
+<div class="QUESTION">
+  <div class="QUESTION-TITLE">Perceived 95. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_94" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_94" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_94" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_94" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_94" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_94" value="2"> 2</label>
+    <label><input type="radio" name="perceived_94" value="3"> 3</label>
+    <label><input type="radio" name="perceived_94" value="4"> 4</label>
+    <label><input type="radio" name="perceived_94" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 96. 나는 마음에 들지 않는 상황에선 냉정하게 선을 긋기도 한다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 96. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_95" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_95" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_95" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_95" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_95" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_95" value="2"> 2</label>
+    <label><input type="radio" name="perceived_95" value="3"> 3</label>
+    <label><input type="radio" name="perceived_95" value="4"> 4</label>
+    <label><input type="radio" name="perceived_95" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 97. 나는 감정적으로 취약한 시기엔 대인관계를 차단하고 싶어진다.</div>
+  <div class="QUESTION-TITLE">Perceived 97. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_96" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_96" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_96" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_96" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_96" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_96" value="2"> 2</label>
+    <label><input type="radio" name="perceived_96" value="3"> 3</label>
+    <label><input type="radio" name="perceived_96" value="4"> 4</label>
+    <label><input type="radio" name="perceived_96" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 98. 좋은 가방, 시계, 자동차 등으로 나의 내 위치나 감각을 드러내고 싶어 할 때가 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 98. 다른 사람의 평가보다 나의 내면적 기준이 행동을 결정하게 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_97" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_97" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_97" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_97" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_97" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_97" value="2"> 2</label>
+    <label><input type="radio" name="perceived_97" value="3"> 3</label>
+    <label><input type="radio" name="perceived_97" value="4"> 4</label>
+    <label><input type="radio" name="perceived_97" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 99. 나는 여행지나 식당 등을 SNS에 올리면서 나의 라이프스타일을 보여주고 싶어 한다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 99. 나는 보통 사람들의 시선보다 내 목표에 집중하려 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_98" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_98" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_98" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_98" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_98" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_98" value="2"> 2</label>
+    <label><input type="radio" name="perceived_98" value="3"> 3</label>
+    <label><input type="radio" name="perceived_98" value="4"> 4</label>
+    <label><input type="radio" name="perceived_98" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 100. 나는 남들보다 더 ‘감각적인 삶’을 살고 있다는 인정을 받고 싶어 한다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 100. 나는 새로운 관점을 받아들이기 전에 내 관점을 먼저 확인한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_99" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_99" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_99" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_99" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_99" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_99" value="2"> 2</label>
+    <label><input type="radio" name="perceived_99" value="3"> 3</label>
+    <label><input type="radio" name="perceived_99" value="4"> 4</label>
+    <label><input type="radio" name="perceived_99" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 101. 나는 남들이 부러워할 만한 장면을 일부러 연출하거나 기록해본 적이 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 101. 자신의 감정이나 생각을 다른 사람과 공유하기보다, 스스로 정리하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_100" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_100" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_100" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_100" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_100" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_100" value="2"> 2</label>
+    <label><input type="radio" name="perceived_100" value="3"> 3</label>
+    <label><input type="radio" name="perceived_100" value="4"> 4</label>
+    <label><input type="radio" name="perceived_100" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 102. 나는 내가 누리는 것을 자랑한다고 느끼진 않지만, 멋지게 보이길 바라는 마음은 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 102. 나는 보통 나의 기준을 지키기 위해 주변의 압박을 무시한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_101" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_101" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_101" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_101" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_101" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_101" value="2"> 2</label>
+    <label><input type="radio" name="perceived_101" value="3"> 3</label>
+    <label><input type="radio" name="perceived_101" value="4"> 4</label>
+    <label><input type="radio" name="perceived_101" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 103. 나는 최신 브랜드나 명품 정보를 놓치지 않으려 자주 검색하거나 비교한다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 103. 나는 스스로 계획한 목표를 달성할 때, 다른 사람의 평가에 크게 의지하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_102" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_102" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_102" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_102" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_102" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_102" value="2"> 2</label>
+    <label><input type="radio" name="perceived_102" value="3"> 3</label>
+    <label><input type="radio" name="perceived_102" value="4"> 4</label>
+    <label><input type="radio" name="perceived_102" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 104. 나는 돈을 쓰더라도 내 취향이나 수준을 표현할 수 있는 소비에 만족감을 느낀다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 104. 나는 주로 혼자서 생각하는 것이 더 생산적이라고 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_103" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_103" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_103" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_103" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_103" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_103" value="2"> 2</label>
+    <label><input type="radio" name="perceived_103" value="3"> 3</label>
+    <label><input type="radio" name="perceived_103" value="4"> 4</label>
+    <label><input type="radio" name="perceived_103" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 105. 나는 사람들 사이에서 '있는 사람', '성공한 사람'처럼 보이고 싶어 할 때가 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 105. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_104" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_104" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_104" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_104" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_104" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_104" value="2"> 2</label>
+    <label><input type="radio" name="perceived_104" value="3"> 3</label>
+    <label><input type="radio" name="perceived_104" value="4"> 4</label>
+    <label><input type="radio" name="perceived_104" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 106. 나는 명품이나 고급 서비스를 접할 때 특별한 기분이나 자부심을 느낀다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 106. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_105" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_105" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_105" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_105" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_105" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_105" value="2"> 2</label>
+    <label><input type="radio" name="perceived_105" value="3"> 3</label>
+    <label><input type="radio" name="perceived_105" value="4"> 4</label>
+    <label><input type="radio" name="perceived_105" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 107. 나는 내 소비나 선택이 누군가에게 '부럽다'는 감정을 일으키면 뿌듯해한다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 107. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_106" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_106" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_106" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_106" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_106" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_106" value="2"> 2</label>
+    <label><input type="radio" name="perceived_106" value="3"> 3</label>
+    <label><input type="radio" name="perceived_106" value="4"> 4</label>
+    <label><input type="radio" name="perceived_106" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 108. 나는 돈이 항상 부족하다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 108. 다른 사람의 평가보다 나의 내면적 기준이 행동을 결정하게 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_107" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_107" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_107" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_107" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_107" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_107" value="2"> 2</label>
+    <label><input type="radio" name="perceived_107" value="3"> 3</label>
+    <label><input type="radio" name="perceived_107" value="4"> 4</label>
+    <label><input type="radio" name="perceived_107" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 109. 나는 돈에 대한 걱정 때문에 잠을 설치는 경우가 많다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 109. 나는 보통 사람들의 시선보다 내 목표에 집중하려 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_108" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_108" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_108" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_108" value="4" required> 4</label>  
-    <label><input type="radio" name="perceived_108" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_108" value="2"> 2</label>
+    <label><input type="radio" name="perceived_108" value="3"> 3</label>
+    <label><input type="radio" name="perceived_108" value="4"> 4</label>  
+    <label><input type="radio" name="perceived_108" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 110. 나는 내 재정 상황을 생각하면 불안하거나 압도당하는 기분이 든다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 110. 나는 새로운 관점을 받아들이기 전에 내 관점을 먼저 확인한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_109" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_109" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_109" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_109" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_109" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_109" value="2"> 2</label>
+    <label><input type="radio" name="perceived_109" value="3"> 3</label>
+    <label><input type="radio" name="perceived_109" value="4"> 4</label>
+    <label><input type="radio" name="perceived_109" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 111. 나는 돈이 없으면 늘 불안하다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 111. 자신의 감정이나 생각을 다른 사람과 공유하기보다, 스스로 정리하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_110" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_110" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_110" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_110" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_110" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_110" value="2"> 2</label>
+    <label><input type="radio" name="perceived_110" value="3"> 3</label>
+    <label><input type="radio" name="perceived_110" value="4"> 4</label>
+    <label><input type="radio" name="perceived_110" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 112. 나는 세상의 대부분의 문제는 결국 돈으로 해결할 수 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 112. 나는 보통 나의 기준을 지키기 위해 주변의 압박을 무시한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_111" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_111" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_111" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_111" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_111" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_111" value="2"> 2</label>
+    <label><input type="radio" name="perceived_111" value="3"> 3</label>
+    <label><input type="radio" name="perceived_111" value="4"> 4</label>
+    <label><input type="radio" name="perceived_111" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 113. 나는 돈이 나에게 자유와 권력을 가져다주는 수단이라고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 113. 나는 스스로 계획한 목표를 달성할 때, 다른 사람의 평가에 크게 의지하지 않는다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_112" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_112" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_112" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_112" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_112" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_112" value="2"> 2</label>
+    <label><input type="radio" name="perceived_112" value="3"> 3</label>
+    <label><input type="radio" name="perceived_112" value="4"> 4</label>
+    <label><input type="radio" name="perceived_112" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 114. 나는 때로는 가족이나 관계보다 돈을 더 중요하게 생각할 때가 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 114. 나는 주로 혼자서 생각하는 것이 더 생산적이라고 느낀다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_113" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_113" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_113" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_113" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_113" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_113" value="2"> 2</label>
+    <label><input type="radio" name="perceived_113" value="3"> 3</label>
+    <label><input type="radio" name="perceived_113" value="4"> 4</label>
+    <label><input type="radio" name="perceived_113" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 115. 나는 돈 때문에 소중한 관계가 소원해진 경험이 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 115. 새로운 사람을 만나면 내 생각을 먼저 정리한 후 대화에 참여한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_114" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_114" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_114" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_114" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_114" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_114" value="2"> 2</label>
+    <label><input type="radio" name="perceived_114" value="3"> 3</label>
+    <label><input type="radio" name="perceived_114" value="4"> 4</label>
+    <label><input type="radio" name="perceived_114" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 116. 나는 남들에게 뒤처지지 않기 위해 돈을 벌어야 한다는 압박감을 느낀다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 116. 나는 보통 외부의 압박보다 내 내면의 목소리를 더 신뢰한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_115" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_115" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_115" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_115" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_115" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_115" value="2"> 2</label>
+    <label><input type="radio" name="perceived_115" value="3"> 3</label>
+    <label><input type="radio" name="perceived_115" value="4"> 4</label>
+    <label><input type="radio" name="perceived_115" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 117. 나는 나의 사회적 지위가 내가 가진 돈이나 재산에 의해 결정된다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 117. 사람들과 대화를 나누기 전에 나 스스로 내용을 충분히 생각하는 습관이 있다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_116" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_116" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_116" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_116" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_116" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_116" value="2"> 2</label>
+    <label><input type="radio" name="perceived_116" value="3"> 3</label>
+    <label><input type="radio" name="perceived_116" value="4"> 4</label>
+    <label><input type="radio" name="perceived_116" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 118. 나는 다른 사람들과 비교했을 때 내 재정 상태가 부족하다고 느낄 때가 많다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 118. 다른 사람의 평가보다 나의 내면적 기준이 행동을 결정하게 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_117" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_117" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_117" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_117" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_117" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_117" value="2"> 2</label>
+    <label><input type="radio" name="perceived_117" value="3"> 3</label>
+    <label><input type="radio" name="perceived_117" value="4"> 4</label>
+    <label><input type="radio" name="perceived_117" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 119. 나는 나의 가치나 자존감이 내가 얼마나 돈을 버는지에 달려있다고 생각한다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 119. 나는 보통 사람들의 시선보다 내 목표에 집중하려 한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_118" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_118" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_118" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_118" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_118" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_118" value="2"> 2</label>
+    <label><input type="radio" name="perceived_118" value="3"> 3</label>
+    <label><input type="radio" name="perceived_118" value="4"> 4</label>
+    <label><input type="radio" name="perceived_118" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 120. 나는 돈이 많을수록 내가 더 가치 있는 사람이라고 느껴진다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 120. 나는 새로운 관점을 받아들이기 전에 내 관점을 먼저 확인한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_119" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_119" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_119" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_119" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_119" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_119" value="2"> 2</label>
+    <label><input type="radio" name="perceived_119" value="3"> 3</label>
+    <label><input type="radio" name="perceived_119" value="4"> 4</label>
+    <label><input type="radio" name="perceived_119" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 121. 나는 돈 이야기를 하는 것이 불편하거나 불안하다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 121. 자신의 감정이나 생각을 다른 사람과 공유하기보다, 스스로 정리하는 편이다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_120" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_120" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_120" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_120" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_120" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_120" value="2"> 2</label>
+    <label><input type="radio" name="perceived_120" value="3"> 3</label>
+    <label><input type="radio" name="perceived_120" value="4"> 4</label>
+    <label><input type="radio" name="perceived_120" value="5"> 5</label>
   </div>
 </div>
 
 <div class="question">
-  <div class="question-title">Perceived 122. 나는 은행 잔고를 확인하는 것을 두려워해서 피하는 경우가 있다고 비춰진다.</div>
+  <div class="QUESTION-TITLE">Perceived 122. 나는 보통 나의 기준을 지키기 위해 주변의 압박을 무시한다.</div>
   <div class="options">
     <label><input type="radio" name="perceived_121" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_121" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_121" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_121" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_121" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_121" value="2"> 2</label>
+    <label><input type="radio" name="perceived_121" value="3"> 3</label>
+    <label><input type="radio" name="perceived_121" value="4"> 4</label>
+    <label><input type="radio" name="perceived_121" value="5"> 5</label>
   </div>
 </div>
 
-<div class="question">
-  <div class="question-title">Perceived 123. 나는 돈이 없으면 주변에서 무시당한다고 느껴진다고 비춰진다.</div>
+  <div class="question-title">
+    Perceived 123. 나는 스스로 계획한 목표를 달성할 때, 다른 사람의 평가에 크게 의지하지 않는다.
+  </div>
   <div class="options">
     <label><input type="radio" name="perceived_122" value="1" required> 1</label>
-    <label><input type="radio" name="perceived_122" value="2" required> 2</label>
-    <label><input type="radio" name="perceived_122" value="3" required> 3</label>
-    <label><input type="radio" name="perceived_122" value="4" required> 4</label>
-    <label><input type="radio" name="perceived_122" value="5" required> 5</label>
+    <label><input type="radio" name="perceived_122" value="2"> 2</label>
+    <label><input type="radio" name="perceived_122" value="3"> 3</label>
+    <label><input type="radio" name="perceived_122" value="4"> 4</label>
+    <label><input type="radio" name="perceived_122" value="5"> 5</label>
   </div>
 </div>
 
-  
-
-    <!-- =================== 여기까지 Perceived 123개 =================== -->
-
-    <!-- ──────────────────────────────────────────────────────────── -->
-    <!-- ④ 모든 질문을 마친 후, 폼 내부에 제출 버튼을 하나만 배치하세요. -->
-    <!--     버튼의 type="submit"이어야 form id= 전체가 전송됩니다.      -->
-    <!-- ──────────────────────────────────────────────────────────── -->
-    <button type="submit" id="submitBtn">제출하기</button>
-  </form>
-  <!-- ── 여기서 </form>이 닫힙니다. ── -->
-
+<!-- 246개 문항이 모두 끝났으니, 아래에 제출 버튼과 닫는 태그를 넣습니다 -->
+<button type="submit" id="submitBtn">제출하기</button>
+</form>
 </body>
 </html>
