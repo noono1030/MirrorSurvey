@@ -33,13 +33,11 @@
   <!-- ① <form> 태그는 딱 한 번만 열고, 모든 질문을 이 안에 넣습니다.    -->
   <!-- ② action / method는 Apps Script 웹앱 예시를 사용합니다.         -->
   <!-- ─────────────────────────────────────────────────────────────────── -->
-  <form
-    id="surveyForm"
-    action="https://script.google.com/macros/s/AKfycbzW8FuqDxj7Bs_T3CyANr3uJZ7BNeFgJd5Ir-4u1MLI29IWa3Zh9R2nS5058xdHNdYcIQ/exec"
-    method="POST"
-  >
-    <!-- (선택) 응답자 이메일 입력란 -->
-    <input type="email" name="_replyto" placeholder="이메일 (선택)" />
+ <form id="surveyForm"
+      action="https://script.google.com/macros/s/AKfycbyJevAX0HKWD0MoeOsyzblhjUoiGPHzAn6TfqWX-FjckCZZAyGCHw0O0okBEC6IGqoLwg/exec"
+      method="POST">
+  <!-- (여기에 Self-Report 1~123, Perceived 1~123 … 그리고 마지막으로 제출 버튼) -->
+</form>
 
     <!-- ─────────────────────────────────────────────────────────────────── -->
     <!-- ③ 이제부터 Self-Report 질문 123개 + Perceived 질문 123개를 모두 넣습니다. -->
